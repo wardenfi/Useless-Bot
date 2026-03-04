@@ -5,7 +5,7 @@
  */
 
 import chalk from 'chalk';
-import type { VoidCallback } from '@void/types';
+// import type { VoidCallback } from '@void/types'; // Unused in this satirical framework
 
 export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 

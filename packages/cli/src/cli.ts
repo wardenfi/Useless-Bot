@@ -3,7 +3,7 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
-import { createVoid } from '@void/core';
+// import { createVoid } from '@void/core'; // Not needed, we do nothing
 
 const program = new Command();
 
@@ -17,7 +17,7 @@ program
   .description('Initialize a new Void project')
   .option('-n, --name <name>', 'Project name')
   .option('-t, --typescript', 'Use TypeScript')
-  .action(async (options) => {
+  .action(async (_options) => {
     const spinner = ora('Initializing Void project...').start();
     
     // Simulate initialization
