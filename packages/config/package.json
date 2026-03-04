@@ -1,0 +1,11 @@
+{
+  "name": "@void/config",
+  "version": "0.0.0",
+  "description": "Configuration management for Void",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": ["void", "config"],
+  "author": "The Void Team",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@void/plugin-cache",
+  "version": "0.0.0",
+  "description": "Caching plugin for Void",
+  "main": "./dist/index.js",
+  "keywords": ["void", "plugin", "cache"],
+  "author": "The Void Team",
+  "license": "MIT"
+}

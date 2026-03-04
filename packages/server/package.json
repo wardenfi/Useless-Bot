@@ -1,0 +1,11 @@
+{
+  "name": "@void/server",
+  "version": "0.0.0",
+  "description": "Server implementation for Void",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": ["void", "server"],
+  "author": "The Void Team",
+  "license": "MIT"
+}

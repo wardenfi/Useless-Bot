@@ -1,0 +1,294 @@
+/**
+ * @void/react - React integration
+ * 
+ * React hooks and components for the Void framework.
+ * Render nothing, reactively.
+ */
+
+import { 
+  createContext, 
+  useContext, 
+  useState, 
+  useEffect, 
+  useCallback, 
+  useMemo,
+  useRef,
+  type ReactNode,
+  type FC,
+  type ComponentType
+} from 'react';
+import { createVoid, type VoidInstance, type VoidOptions } from '@void/core';
+import type { VoidResult } from '@void/types';
+
+/**
+ * Hook options
+ */
+export interface VoidHookOptions extends VoidOptions {
+  autoInitialize?: boolean;
+}
+
+/**
+ * Context value
+ */
+export interface VoidContextValue {
+  instance: VoidInstance | null;
+  config: VoidOptions;
+}
+
+/**
+ * Void context
+ */
+const VoidContext = createContext<VoidContextValue>({
+  instance: null,
+  config: {},
+});
+
+/**
+ * Provider props
+ */
+export interface VoidProviderProps {
+  children: ReactNode;
+  config?: VoidOptions;
+}
+
+/**
+ * VoidProvider component
+ * Provides void context to your app
+ */
+export const VoidProvider: FC<VoidProviderProps> = ({ children, config = {} }) => {
+  const [instance] = useState(() => createVoid(config));
+
+  useEffect(() => {
+    instance.initialize();
+    return () => {
+      instance.destroy();
+    };
+  }, [instance]);
+
+  return (
+    <VoidContext.Provider value={{ instance, config }}>
+      {children}
+    </VoidContext.Provider>
+  );
+};
+
+/**
+ * Hook to access void context
+ */
+export function useVoidContext(): VoidContextValue {
+  return useContext(VoidContext);
+}
+
+/**
+ * Hook to create and manage a void instance
+ * 
+ * @param options - Void options
+ * @returns Void instance
+ */
+export function useVoid(options: VoidHookOptions = {}): VoidInstance {
+  const { autoInitialize = true, ...voidOptions } = options;
+  const [instance] = useState(() => createVoid(voidOptions));
+  const initialized = useRef(false);
+
+  useEffect(() => {
+    if (autoInitialize && !initialized.current) {
+      instance.initialize();
+      initialized.current = true;
+    }
+
+    return () => {
+      instance.destroy();
+    };
+  }, [instance, autoInitialize]);
+
+  return instance;
+}
+
+/**
+ * Hook that returns nothing
+ * 
+ * @returns undefined
+ */
+export function useNothing(): VoidResult {
+  return undefined;
+}
+
+/**
+ * Hook for void state (always undefined)
+ * 
+ * @returns Tuple of [undefined, noop setter]
+ */
+export function useVoidState(): [VoidResult, (value?: any) => void] {
+  const setValue = useCallback(() => {
+    // Setting nothing does nothing
+  }, []);
+
+  return [undefined, setValue];
+}
+
+/**
+ * Effect hook that does nothing
+ * 
+ * @param callback - Callback to run
+ */
+export function useVoidEffect(callback: () => void | (() => void)): void {
+  useEffect(() => {
+    return callback();
+  }, [callback]);
+}
+
+/**
+ * Memoized callback that does nothing
+ * 
+ * @param callback - Callback function
+ * @returns Memoized callback
+ */
+export function useVoidCallback<T extends (...args: any[]) => any>(
+  callback: T
+): T {
+  return useCallback(callback, []);
+}
+
+/**
+ * Memoized value (always returns the same nothing)
+ * 
+ * @param factory - Value factory
+ * @returns Memoized value
+ */
+export function useVoidMemo<T>(factory: () => T): T {
+  return useMemo(factory, []);
+}
+
+/**
+ * Hook that tracks void operations
+ * 
+ * @returns Operation status
+ */
+export function useVoidOperation() {
+  const [status, setStatus] = useState<'idle' | 'running' | 'complete'>('idle');
+  const instance = useVoid();
+
+  const run = useCallback(async () => {
+    setStatus('running');
+    await instance.run();
+    setStatus('complete');
+  }, [instance]);
+
+  const reset = useCallback(() => {
+    setStatus('idle');
+  }, []);
+
+  return {
+    status,
+    run,
+    reset,
+    result: instance.getResult(),
+  };
+}
+
+/**
+ * Component that renders nothing
+ */
+export const Void: FC = () => {
+  return null;
+};
+
+/**
+ * Alias for Void component
+ */
+export const Nothing: FC = Void;
+
+/**
+ * Component that renders its children after doing nothing
+ */
+export const VoidWrapper: FC<{ children: ReactNode }> = ({ children }) => {
+  const nothing = useNothing();
+  
+  // Do nothing with nothing
+  useEffect(() => {
+    // Nothing happens here
+  }, [nothing]);
+
+  return <>{children}</>;
+};
+
+/**
+ * Higher-order component that adds void instance to props
+ */
+export function withVoid<P extends object>(
+  Component: ComponentType<P & { void: VoidInstance }>
+): FC<P> {
+  return (props: P) => {
+    const void_ = useVoid();
+    return <Component {...props} void={void_} />;
+  };
+}
+
+/**
+ * Hook for conditional void rendering
+ */
+export function useVoidIf(condition: boolean): boolean {
+  return useMemo(() => !condition, [condition]);
+}
+
+/**
+ * Custom hook for void form handling
+ */
+export function useVoidForm() {
+  const [values] = useState<Record<string, any>>({});
+  
+  const handleChange = useCallback(() => {
+    // Do nothing with the change
+  }, []);
+
+  const handleSubmit = useCallback((e?: React.FormEvent) => {
+    e?.preventDefault();
+    // Submit nothing
+  }, []);
+
+  const reset = useCallback(() => {
+    // Reset to nothing (which it already is)
+  }, []);
+
+  return {
+    values,
+    handleChange,
+    handleSubmit,
+    reset,
+  };
+}
+
+/**
+ * Hook for void async operations
+ */
+export function useVoidAsync<T = void>(
+  asyncFn: () => Promise<T>
+): {
+  data: T | null;
+  loading: boolean;
+  error: Error | null;
+  execute: () => Promise<void>;
+} {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  const execute = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      const result = await asyncFn();
+      setData(result);
+    } catch (err) {
+      setError(err as Error);
+    } finally {
+      setLoading(false);
+    }
+  }, [asyncFn]);
+
+  return { data, loading, error, execute };
+}
+
+// Re-export types
+export type { VoidInstance, VoidOptions, VoidResult };

@@ -1,0 +1,25 @@
+{
+  "name": "@void/types",
+  "version": "0.0.0",
+  "description": "TypeScript type definitions for Void",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "void",
+    "types",
+    "typescript"
+  ],
+  "author": "The Void Team",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@void/sdk",
+  "version": "0.0.0",
+  "description": "Software Development Kit for Void",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": ["void", "sdk"],
+  "author": "The Void Team",
+  "license": "MIT",
+  "dependencies": {
+    "@void/core": "workspace:*",
+    "@void/types": "workspace:*",
+    "@void/utils": "workspace:*"
+  }
+}

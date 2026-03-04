@@ -1,0 +1,15 @@
+{
+  "name": "@void/api",
+  "version": "0.0.0",
+  "description": "REST API framework for Void",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": ["void", "api", "rest"],
+  "author": "The Void Team",
+  "license": "MIT",
+  "dependencies": {
+    "@void/core": "workspace:*",
+    "@void/types": "workspace:*"
+  }
+}
