@@ -14,18 +14,26 @@ class Desktop95 {
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
     
+    // Remove boot screen after load
+    setTimeout(() => {
+      const bootScreen = document.getElementById('boot-screen');
+      if (bootScreen) {
+        bootScreen.style.display = 'none';
+      }
+    }, 2500);
+    
     // Auto-open welcome and about windows on page load
     setTimeout(() => {
       this.openWindow('welcome-window');
       setTimeout(() => {
         this.openWindow('about-window');
       }, 500);
-    }, 300);
+    }, 3000); // Delay until after boot screen
     
     // Start annoying virus popups after a delay
     setTimeout(() => {
       this.startVirusPopups();
-    }, 5000);
+    }, 35000); // 35 seconds - even longer delay
   }
   
   setupEventListeners() {
@@ -385,15 +393,17 @@ class Desktop95 {
   }
   
   startVirusPopups() {
-    // Show first popup immediately
-    this.showVirusPopup();
+    // Show first popup after longer delay
+    setTimeout(() => {
+      this.showVirusPopup();
+    }, 30000); // 30 seconds instead of immediate
     
-    // Random popups every 15-45 seconds
+    // Random popups every 2-4 minutes (much less frequent)
     setInterval(() => {
-      if (Math.random() > 0.3) {
+      if (Math.random() > 0.5) { // 50% chance instead of 70%
         this.showVirusPopup();
       }
-    }, 15000 + Math.random() * 30000);
+    }, 120000 + Math.random() * 120000); // 2-4 minutes
   }
   
   showVirusPopup() {
@@ -461,9 +471,9 @@ class Desktop95 {
     
     const closePopup = () => {
       popupEl.remove();
-      // Sometimes spawn another popup when you close one (annoying!)
-      if (Math.random() > 0.7) {
-        setTimeout(() => this.showVirusPopup(), 500);
+      // Rarely spawn another popup when you close one (reduced from 70% to 20%)
+      if (Math.random() > 0.8) {
+        setTimeout(() => this.showVirusPopup(), 2000);
       }
     };
     

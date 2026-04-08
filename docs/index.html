@@ -12,19 +12,83 @@
     <meta property="og:url" content="https://uselessbot.fun">
     <title>useless bot - Autonomous Nothing at Scale</title>
     <link rel="stylesheet" href="css/win95.css">
+    <style>
+        /* Boot screen */
+        #boot-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            font-family: 'Courier New', monospace;
+            animation: fadeOut 0.5s ease-in 2s forwards;
+        }
+        
+        #boot-screen h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            animation: pulse 1s ease-in-out infinite;
+        }
+        
+        #boot-screen .loading-bar {
+            width: 400px;
+            height: 30px;
+            border: 2px solid #fff;
+            padding: 4px;
+        }
+        
+        #boot-screen .loading-bar-fill {
+            height: 100%;
+            background: #fff;
+            width: 0%;
+            animation: load 2s ease-in-out forwards;
+        }
+        
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        @keyframes load {
+            to { width: 100%; }
+        }
+    </style>
 </head>
 <body>
+    <!-- Windows 95 Boot Screen -->
+    <div id="boot-screen">
+        <h1>useless bot 95</h1>
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+        <p style="margin-top: 20px;">Loading autonomous nothing...</p>
+    </div>
+
     <!-- Desktop -->
     <div class="desktop">
         <!-- Desktop Icons -->
         <div class="desktop-icons">
             <div class="desktop-icon" data-window="welcome-window" tabindex="0">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23008080' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'%3E💻%3C/text%3E%3C/svg%3E" alt="">
-                <span class="icon-label">Welcome</span>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23008080' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'%3E�%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">My Computer</span>
             </div>
             <div class="desktop-icon" data-window="docs-window" tabindex="0">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23c0c0c0' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23000' text-anchor='middle'%3E📄%3C/text%3E%3C/svg%3E" alt="">
-                <span class="icon-label">Documentation</span>
+                <span class="icon-label">Quick Start</span>
             </div>
             <div class="desktop-icon" data-window="about-window" tabindex="0">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23808080' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'%3Eℹ️%3C/text%3E%3C/svg%3E" alt="">
@@ -36,7 +100,11 @@
             </div>
             <div class="desktop-icon" data-window="full-docs-window" tabindex="0">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23FFD700' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23000' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E" alt="">
-                <span class="icon-label">Full Docs</span>
+                <span class="icon-label">Help</span>
+            </div>
+            <div class="desktop-icon" tabindex="0" style="cursor: help;" onclick="alert('Recycle Bin is empty.\\n\\nJust like everything else here.')">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23c0c0c0' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23000' text-anchor='middle'%3E🗑️%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">Recycle Bin</span>
             </div>
         </div>
 
@@ -46,8 +114,8 @@
         <div class="window" id="welcome-window" style="width: 600px; height: 500px;">
             <div class="title-bar">
                 <div class="title-bar-text">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23fff' text-anchor='middle'%3E💻%3C/text%3E%3C/svg%3E" alt="">
-                    useless bot - Welcome
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23fff' text-anchor='middle'%3E�%3C/text%3E%3C/svg%3E" alt="">
+                    My Computer - useless bot
                 </div>
                 <div class="title-bar-controls">
                     <button class="title-bar-btn minimize-btn" aria-label="Minimize">_</button>
@@ -450,12 +518,7 @@ console.log(agent.getResult()); // undefined</pre>
     <div class="taskbar">
         <button class="start-button">
             <div class="start-button-logo">
-                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <rect fill="#FF0000" x="0" y="0" width="8" height="8"/>
-                    <rect fill="#00FF00" x="10" y="0" width="10" height="8"/>
-                    <rect fill="#0000FF" x="0" y="10" width="8" height="10"/>
-                    <rect fill="#FFFF00" x="10" y="10" width="10" height="10"/>
-                </svg>
+                <img src="start.png" alt="Start" style="width: 20px; height: 20px;">
             </div>
             <span>Start</span>
         </button>
@@ -463,6 +526,8 @@ console.log(agent.getResult()); // undefined</pre>
         <div class="task-list"></div>
         
         <div class="system-tray">
+            <span style="font-size: 14px;" title="Volume">🔊</span>
+            <span style="font-size: 14px; margin-left: 4px;" title="Network">📡</span>
             <span class="clock">12:00 PM</span>
         </div>
     </div>
@@ -472,12 +537,12 @@ console.log(agent.getResult()); // undefined</pre>
         <div class="start-menu-banner">useless bot 95</div>
         <div class="start-menu-items">
             <div class="start-menu-item" data-window="welcome-window">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E💻%3C/text%3E%3C/svg%3E" alt="">
-                <span>Welcome</span>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E�%3C/text%3E%3C/svg%3E" alt="">
+                <span>My Computer</span>
             </div>
             <div class="start-menu-item" data-window="docs-window">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E📄%3C/text%3E%3C/svg%3E" alt="">
-                <span>Documentation</span>
+                <span>Quick Start</span>
             </div>
             <div class="start-menu-item" data-window="about-window">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3Eℹ️%3C/text%3E%3C/svg%3E" alt="">
@@ -490,12 +555,12 @@ console.log(agent.getResult()); // undefined</pre>
             </div>
             <div class="start-menu-item" data-window="full-docs-window">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E" alt="">
-                <span>Full Documentation</span>
+                <span>Help</span>
             </div>
             <div class="start-menu-separator"></div>
             <div class="start-menu-item" onclick="location.reload()">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E🔄%3C/text%3E%3C/svg%3E" alt="">
-                <span>Restart Computer</span>
+                <span>Shut Down...</span>
             </div>
         </div>
     </div>
