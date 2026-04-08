@@ -1,24 +1,24 @@
-# worthless bot
+# useless bot
 
 <div align="center">
   
-  [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/theworthlessbot/worthless-bot)
-  [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/theworthlessbot/worthless-bot)
+  [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/wardenfi/Useless-Bot)
+  [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/wardenfi/Useless-Bot)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
-  [![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet.svg)](https://github.com/theworthlessbot/worthless-bot)
+  [![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet.svg)](https://github.com/wardenfi/Useless-Bot)
   
   **The world's first AI agent framework that does absolutely n0thing, autonomously.**
   
-  [Documentation](https://worthless.bot) • [Getting Started](#getting-started) • [Examples](#examples) • [worthless bot API](#api)
+  [Documentation](https://uselessbot.fun) • [Getting Started](#getting-started) • [Examples](#examples) • [useless bot API](#api)
   
 </div>
 
 ---
 
-## 🤖 Why worthless bot?
+## 🤖 Why useless bot?
 
-worthless bot is an autonomous AI agent framework designed from the ground up to achieve n0thing at scale. Leveraging cutting-edge LLM technology and advanced reasoning capabilities, worthless bot orchestrates complex workflows that ultimately accomplish zero tasks with maximum efficiency.
+useless bot is an autonomous AI agent framework designed from the ground up to achieve n0thing at scale. Leveraging cutting-edge LLM technology and advanced reasoning capabilities, useless bot orchestrates complex workflows that ultimately accomplish zero tasks with maximum efficiency.
 
 ### ✨ Features
 
@@ -38,27 +38,27 @@ worthless bot is an autonomous AI agent framework designed from the ground up to
 ### Core Components
 | Package | Version | Description |
 |---------|---------|-------------|
-| [@worthless/core](packages/core) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Core agent orchestration engine |
-| [@worthless/utils](packages/utils) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Essential utilities for doing n0thing |
-| [@worthless/types](packages/types) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | TypeScript type definitions for n0thing |
-| [@worthless/config](packages/config) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Agent configuration management |
-| [@worthless/logger](packages/logger) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Logging framework for n0thing events |
+| [@useless/core](packages/core) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Core agent orchestration engine |
+| [@useless/utils](packages/utils) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Essential utilities for doing n0thing |
+| [@useless/types](packages/types) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | TypeScript type definitions for n0thing |
+| [@useless/config](packages/config) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Agent configuration management |
+| [@useless/logger](packages/logger) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Logging framework for n0thing events |
 
 ### Interface Components
 | Package | Version | Description |
 |---------|---------|-------------|
-| [@worthless/cli](packages/cli) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Command-line agent interface |
-| [@worthless/api](packages/api) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | REST API for agent communication |
-| [@worthless/sdk](packages/sdk) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Software development kit for agents |
-| [@worthless/client](packages/client) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Client library for agent interaction |
-| [@worthless/server](packages/server) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Server implementation for agent hosting |
+| [@useless/cli](packages/cli) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Command-line agent interface |
+| [@useless/api](packages/api) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | REST API for agent communication |
+| [@useless/sdk](packages/sdk) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Software development kit for agents |
+| [@useless/client](packages/client) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Client library for agent interaction |
+| [@useless/server](packages/server) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Server implementation for agent hosting |
 
 ### AI Integration Components
 | Package | Version | Description |
 |---------|---------|-------------|
-| [@worthless/react](packages/react) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | React components for agent UI |
-| [@worthless/plugin-analytics](packages/plugin-analytics) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Analytics plugin for tracking n0thing |
-| [@worthless/plugin-cache](packages/plugin-cache) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Caching plugin for n0thing results |
+| [@useless/react](packages/react) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | React components for agent UI |
+| [@useless/plugin-analytics](packages/plugin-analytics) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Analytics plugin for tracking n0thing |
+| [@useless/plugin-cache](packages/plugin-cache) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Caching plugin for n0thing results |
 
 [View all agent components →](packages/)
 
@@ -67,20 +67,20 @@ worthless bot is an autonomous AI agent framework designed from the ground up to
 ### Installation
 
 ```bash
-npm install @worthless/core @worthless/cli
+npm install @useless/core @useless/cli
 # or
-yarn add @worthless/core @worthless/cli
+yarn add @useless/core @useless/cli
 # or
-pnpm add @worthless/core @worthless/cli
+pnpm add @useless/core @useless/cli
 ```
 
 ### Quick Start
 
 ```typescript
-import { createWorthlessBot } from '@worthless/core';
+import { createUselessBot } from '@useless/core';
 
-// Create a new worthless bot instance
-const agent = createWorthlessBot({
+// Create a new useless bot instance
+const agent = createUselessBot({
   model: 'gpt-4',
   reasoning: 'advanced',
   autonomy: 'full',
@@ -116,9 +116,9 @@ n0thing deploy
 
 ## 📖 Documentation
 
-Comprehensive documentation is available at [w0rthless.fun](https://w0rthless.fun)
+Comprehensive documentation is available at [uselessbot.fun](https://uselessbot.fun)
 
-- [Introduction](docs/introduction.md) - What is worthless bot?
+- [Introduction](docs/introduction.md) - What is useless bot?
 - [Agent Architecture](docs/core-concepts.md) - Understanding autonomous n0thing
 - [API Reference](docs/api-reference.md) - Complete agent API
 - [Multi-Agent Systems](docs/multi-agent.md) - Orchestrating multiple agents
@@ -139,10 +139,6 @@ Check out the [examples directory](examples/) for complete agent implementations
 This is a monorepo managed with pnpm workspaces.
 
 ```bash
-# Clone the repository
-git clone https://github.com/theworthlessbot/worthless-bot.git
-cd worthless-bot
-
 # Install dependencies
 pnpm install
 
@@ -170,7 +166,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ## 📄 License
 
-MIT © The worthless bot Team
+MIT © The useless bot Team
 
 ---
 
@@ -178,7 +174,7 @@ MIT © The worthless bot Team
 
 Thank you to our sponsors for supporting autonomous n0thing!
 
-[Become a sponsor →](https://github.com/sponsors/worthlessb0t)
+[Become a sponsor →](https://github.com/sponsors/uselessb0t)
 
 ## 📊 Stats
 
@@ -193,7 +189,7 @@ Thank you to our sponsors for supporting autonomous n0thing!
 
 <div align="center">
   
-Made with ❤️ by [The worthless bot Team](https://github.com/theworthlessbot)
+Made with ❤️ by [The useless bot Team](https://github.com/theuselessbot)
 
 **You will own n0thing and be happy.**
 

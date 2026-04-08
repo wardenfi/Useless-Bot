@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/config",
+  "name": "@useless/config",
   "version": "0.0.0",
-  "description": "Configuration management for worthless bot",
+  "description": "Configuration management for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["worthless", "bot", "config"],
-  "author": "The worthless bot Team",
+  "keywords": ["useless", "bot", "config"],
+  "author": "The useless bot Team",
   "license": "MIT"
 }

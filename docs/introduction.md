@@ -1,15 +1,15 @@
-# Introduction to worthless bot
+# Introduction to useless bot
 
-Welcome to worthless bot - the most comprehensive solution for building nothing, efficiently.
+Welcome to useless bot - the most comprehensive solution for building nothing, efficiently.
 
-## What is worthless bot?
+## What is useless bot?
 
-worthless bot is a modern, enterprise-grade framework designed from the ground up to help developers accomplish nothing with maximum efficiency. Built with TypeScript and featuring a modular architecture, worthless bot provides all the tools you need to ship nothing to production.
+useless bot is a modern, enterprise-grade framework designed from the ground up to help developers accomplish nothing with maximum efficiency. Built with TypeScript and featuring a modular architecture, useless bot provides all the tools you need to ship nothing to production.
 
-## Why worthless bot?
+## Why useless bot?
 
 ### 🎯 Zero Configuration
-worthless bot works out of the box. No complex setup, no confusing options. Just install and start doing nothing.
+useless bot works out of the box. No complex setup, no confusing options. Just install and start doing nothing.
 
 ### 📦 Modular Architecture
 Use only what you need. Every package is independently usable, allowing you to cherry-pick functionality.
@@ -28,14 +28,14 @@ Works in Node.js, browsers, and edge runtimes. Nothing works everywhere.
 
 ## Core Concepts
 
-### The worthless bot Instance
+### The useless bot Instance
 
-At the heart of worthless bot is the `WorthlessInstance` - a manager for your nothing:
+At the heart of useless bot is the `UselessInstance` - a manager for your nothing:
 
 ```typescript
-import { createWorthlessBot } from '@worthless/core';
+import { createUselessBot } from '@useless/core';
 
-const app = createWorthlessBot({
+const app = createUselessBot({
   mode: 'production',
   debug: false
 });
@@ -51,11 +51,11 @@ const result = app.getResult(); // undefined
 - **Nothing** (`null | undefined`): The absence or nullification of value
 - **Empty** (`[]` | `{}`): Containers with no content
 
-All are valid forms of nothing in worthless bot.
+All are valid forms of nothing in useless bot.
 
 ### Packages
 
-worthless bot is organized as a monorepo with 50+ packages:
+useless bot is organized as a monorepo with 50+ packages:
 
 - **Core Packages**: Fundamental functionality
 - **Interface Packages**: CLIs, APIs, SDKs
@@ -68,24 +68,24 @@ worthless bot is organized as a monorepo with 50+ packages:
 
 ```bash
 # Install core packages
-npm install @worthless/core @worthless/cli
+npm install @useless/core @useless/cli
 
 # Or use the CLI to scaffold
-npx @worthless/create my-app
+npx @useless/create my-app
 ```
 
-### Your First worthless bot App
+### Your First useless bot App
 
 ```typescript
-import { createWorthlessBot } from '@worthless/core';
-import { logger } from '@worthless/logger';
+import { createUselessBot } from '@useless/core';
+import { logger } from '@useless/logger';
 
 async function main() {
-  logger.info('Creating worthless bot...');
-  const app = createWorthlessBot();
+  logger.info('Creating useless bot...');
+  const app = createUselessBot();
   
   await app.initialize();
-  logger.success('worthless bot initialized!');
+  logger.success('useless bot initialized!');
   
   await app.run();
   logger. success('Nothing accomplished!');
@@ -98,21 +98,21 @@ main();
 
 ```bash
 # Start development server
-worthless dev
+useless dev
 
 # Build for production
-worthless build
+useless build
 
 # Run tests
-worthless test
+useless test
 
 # Deploy to production
-worthless deploy
+useless deploy
 ```
 
 ## Philosophy
 
-worthless bot is built on three core principles:
+useless bot is built on three core principles:
 
 1. **Nothing is Everything**: Embrace the void
 2. **Simplicity**: Do less, accomplish nothing

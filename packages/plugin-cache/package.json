@@ -1,14 +1,14 @@
 {
-  "name": "@worthless/plugin-cache",
+  "name": "@useless/plugin-cache",
   "version": "0.0.0",
-  "description": "Caching plugin for worthless bot",
+  "description": "Caching plugin for useless bot",
   "main": "./dist/index.js",
   "scripts": {
     "build": "echo 'Nothing to build'",
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["worthless", "bot", "plugin", "cache"],
-  "author": "The worthless bot Team",
+  "keywords": ["useless", "bot", "plugin", "cache"],
+  "author": "The useless bot Team",
   "license": "MIT"
 }

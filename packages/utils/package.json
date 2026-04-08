@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/utils",
+  "name": "@useless/utils",
   "version": "0.0.0",
-  "description": "Utility functions for worthless bot",
+  "description": "Utility functions for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -13,12 +13,12 @@
     "lint": "eslint src/ --max-warnings 0 || exit 0"
   },
   "keywords": [
-    "worthless",
+    "useless",
     "bot",
     "utilities",
     "helpers"
   ],
-  "author": "The worthless bot Team",
+  "author": "The useless bot Team",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

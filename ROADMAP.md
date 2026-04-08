@@ -1,18 +1,18 @@
 # Roadmap
 
-The future of nothing. Here's what we're planning for worthless bot.
+The future of nothing. Here's what we're planning for useless bot.
 
 ## Version 0.1.0 (Next Release) 🚀
 
 **Target: Q2 2026**
 
 ### New Packages
-- [ ] `@worthless/api` - REST API framework
-- [ ] `@worthless/graphql` - GraphQL integration
-- [ ] `@worthless/websocket` - WebSocket support
-- [ ] `@worthless/database` - Database adapters
-- [ ] `@worthless/cache` - Caching layer
-- [ ] `@worthless/queue` - Job queue system
+- [ ] `@useless/api` - REST API framework
+- [ ] `@useless/graphql` - GraphQL integration
+- [ ] `@useless/websocket` - WebSocket support
+- [ ] `@useless/database` - Database adapters
+- [ ] `@useless/cache` - Caching layer
+- [ ] `@useless/queue` - Job queue system
 
 ### Improvements
 - [ ] Enhanced error messages
@@ -32,21 +32,21 @@ The future of nothing. Here's what we're planning for worthless bot.
 **Target: Q3 2026**
 
 ### Framework Integrations
-- [ ] `@worthless/vue` - Vue 3 integration
-- [ ] `@worthless/angular` - Angular integration
-- [ ] `@worthless/svelte` - Svelte integration
-- [ ] `@worthless/solid` - Solid.js integration
-- [ ] `@worthless/next` - Next.js integration
-- [ ] `@worthless/remix` - Remix integration
+- [ ] `@useless/vue` - Vue 3 integration
+- [ ] `@useless/angular` - Angular integration
+- [ ] `@useless/svelte` - Svelte integration
+- [ ] `@useless/solid` - Solid.js integration
+- [ ] `@useless/next` - Next.js integration
+- [ ] `@useless/remix` - Remix integration
 
 ### Backend Support
-- [ ] `@worthless/express` - Express middleware
-- [ ] `@worthless/fastify` - Fastify plugin
-- [ ] `@worthless/koa` - Koa middleware
-- [ ] `@worthless/hono` - Hono integration
+- [ ] `@useless/express` - Express middleware
+- [ ] `@useless/fastify` - Fastify plugin
+- [ ] `@useless/koa` - Koa middleware
+- [ ] `@useless/hono` - Hono integration
 
 ### Testing
-- [ ] `@worthless/testing` - Testing utilities
+- [ ] `@useless/testing` - Testing utilities
 - [ ] Visual regression testing
 - [ ] E2E testing tools
 - [ ] Performance benchmarks
@@ -109,7 +109,7 @@ We're listening! Top requested features:
 
 ## Long-term Vision
 
-Our mission is to make worthless bot the **de facto standard for doing nothing**. We envision:
+Our mission is to make useless bot the **de facto standard for doing nothing**. We envision:
 
 - 🌍 Used by millions of developers worldwide
 - 🏢 Adopted by Fortune 500 companies
@@ -136,23 +136,23 @@ We follow semantic versioning:
 - **Minor** (0.1.0): New features
 - **Patch** (0.0.1): Bug fixes
 
-Given that worthless bot does nothing, breaking changes are theoretical.
+Given that useless bot does nothing, breaking changes are theoretical.
 
 ## Communication
 
 Stay updated:
 
-- 📰 Follow our [blog](https://worthless-bot.dev/blog)
-- 🐦 Twitter: [@worthlessbot](https://twitter.com/worthlessbot)
-- 💬 Discord: [Join server](https://discord.gg/worthless)
-- 📧 Newsletter: [Subscribe](https://worthless-bot.dev/newsletter)
+- 📰 Follow our [blog](https://useless-bot.dev/blog)
+- 🐦 Twitter: [@uselessbot](https://twitter.com/uselessbot)
+- 💬 Discord: [Join server](https://discord.gg/useless)
+- 📧 Newsletter: [Subscribe](https://useless-bot.dev/newsletter)
 
 ## Funding
 
-worthless bot is MIT licensed and free forever. Support development:
+useless bot is MIT licensed and free forever. Support development:
 
 - 💖 [GitHub Sponsors](https://github.com/sponsors/yourusername)
-- ☕ [Buy us a coffee](https://buymeacoffee.com/worthlessbot)
+- ☕ [Buy us a coffee](https://buymeacoffee.com/uselessbot)
 - 🏢 Enterprise support plans
 
 ---

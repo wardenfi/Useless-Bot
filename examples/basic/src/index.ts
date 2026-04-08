@@ -1,19 +1,19 @@
 /**
- * Basic worthless bot Example
+ * Basic useless bot Example
  * 
- * This example demonstrates the fundamental usage of worthless bot.
+ * This example demonstrates the fundamental usage of useless bot.
  * Watch as nothing happens, beautifully.
  */
 
-import { createWorthlessBot } from '@worthless/core';
-import { sleep, noop } from '@worthless/utils';
+import { createUselessBot } from '@useless/core';
+import { sleep, noop } from '@useless/utils';
 
 async function main() {
-  console.log('🤖 Welcome to worthless bot!\n');
+  console.log('🤖 Welcome to useless bot!\n');
 
-  // Create a new worthless bot instance
-  console.log('Creating worthless bot instance...');
-  const app = createWorthlessBot({
+  // Create a new useless bot instance
+  console.log('Creating useless bot instance...');
+  const app = createUselessBot({
     mode: 'development',
     debug: true,
   });
@@ -23,8 +23,8 @@ async function main() {
   await app.initialize();
   console.log(`Status: ${app.getStatus()}\n`);
 
-  // Run the worthless bot
-  console.log('Running worthless bot...');
+  // Run the useless bot
+  console.log('Running useless bot...');
   await app.run();
 
   // Get the result
@@ -43,11 +43,11 @@ async function main() {
 
   // Clean up (also does nothing)
   await app.destroy();
-  console.log('worthless bot destroyed. It was never there anyway.');
+  console.log('useless bot destroyed. It was never there anyway.');
 }
 
 // Run the example
 main().catch((error) => {
-  console.error('Error in worthless bot:', error);
+  console.error('Error in useless bot:', error);
   process.exit(1);
 });

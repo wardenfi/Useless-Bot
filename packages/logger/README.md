@@ -1,24 +1,24 @@
-# @worthless/logger
+# @useless/logger
 
-Beautiful logging for nothing. Log your worthless bot operations with style.
+Beautiful logging for nothing. Log your useless bot operations with style.
 
 ## Installation
 
 ```bash
-npm install @worthless/logger
+npm install @useless/logger
 ```
 
 ## Usage
 
 ```typescript
-import { createLogger } from '@worthless/logger';
+import { createLogger } from '@useless/logger';
 
 const logger = createLogger({
   level: 'info',
   pretty: true
 });
 
-logger.info('Starting worthless bot operation...');
+logger.info('Starting useless bot operation...');
 logger.debug('Debugging nothing');
 logger.warn('Warning: Something might not happen');
 logger.error('Error: Nothing went wrong');
@@ -36,7 +36,7 @@ const logger = createLogger({
   level: 'debug',  // 'debug' | 'info' | 'warn' | 'error'
   pretty: true,    // Enable colors
   timestamp: true, // Show timestamps
-  prefix: '[worthless bot]' // Custom prefix
+  prefix: '[useless bot]' // Custom prefix
 });
 ```
 
@@ -80,7 +80,7 @@ logger.table([
 ### Basic Usage
 
 ```typescript
-import { createLogger } from '@worthless/logger';
+import { createLogger } from '@useless/logger';
 
 const logger = createLogger();
 

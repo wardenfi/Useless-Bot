@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/api",
+  "name": "@useless/api",
   "version": "0.0.0",
-  "description": "REST API framework for worthless bot",
+  "description": "REST API framework for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,11 +10,11 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["worthless", "bot", "api", "rest"],
-  "author": "The worthless bot Team",
+  "keywords": ["useless", "bot", "api", "rest"],
+  "author": "The useless bot Team",
   "license": "MIT",
   "dependencies": {
-    "@worthless/core": "workspace:*",
-    "@worthless/types": "workspace:*"
+    "@useless/core": "workspace:*",
+    "@useless/types": "workspace:*"
   }
 }

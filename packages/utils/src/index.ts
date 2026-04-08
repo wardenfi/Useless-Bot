@@ -1,5 +1,5 @@
 /**
- * @worthless/utils - Utility functions
+ * @useless/utils - Utility functions
  * 
  * Essential utilities for doing nothing, efficiently.
  */

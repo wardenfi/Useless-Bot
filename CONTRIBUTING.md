@@ -1,6 +1,6 @@
-# Contributing to worthless bot
+# Contributing to useless bot
 
-First off, thank you for considering contributing to worthless bot! It's people like you that make worthless bot such a great framework.
+First off, thank you for considering contributing to useless bot! It's people like you that make useless bot such a great framework.
 
 ## Code of Conduct
 
@@ -42,8 +42,8 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 ```bash
 # Clone your fork
-git clone https://github.com/your-username/worthless-bot.git
-cd worthless-bot
+git clone https://github.com/your-username/useless-bot.git
+cd useless-bot
 
 # Install dependencies
 pnpm install
@@ -61,7 +61,7 @@ pnpm lint
 ## Project Structure
 
 ```
-worthless-bot/
+useless-bot/
 ├── packages/           # All framework packages
 │   ├── core/          # Core framework
 │   ├── cli/           # CLI tool
@@ -89,9 +89,9 @@ worthless-bot/
 * Group related tests using describe blocks
 
 ```typescript
-describe('createWorthlessBot', () => {
-  it('should create a worthless bot instance', () => {
-    const app = createWorthlessBot();
+describe('createUselessBot', () => {
+  it('should create a useless bot instance', () => {
+    const app = createUselessBot();
     expect(app).toBeDefined();
   });
 });

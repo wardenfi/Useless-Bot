@@ -1,7 +1,7 @@
 /**
- * @worthless/react - React integration
+ * @useless/react - React integration
  * 
- * React hooks and components for worthless bot.
+ * React hooks and components for useless bot.
  * Render nothing, reactively.
  */
 
@@ -17,28 +17,28 @@ import {
   type FC,
   type ComponentType
 } from 'react';
-import { createWorthlessBot, type WorthlessInstance, type WorthlessOptions } from '@worthless/core';
-import type { WorthlessResult } from '@worthless/types';
+import { createUselessBot, type UselessInstance, type UselessOptions } from '@useless/core';
+import type { UselessResult } from '@useless/types';
 
 /**
  * Hook options
  */
-export interface WorthlessHookOptions extends WorthlessOptions {
+export interface UselessHookOptions extends UselessOptions {
   autoInitialize?: boolean;
 }
 
 /**
  * Context value
  */
-export interface WorthlessContextValue {
-  instance: WorthlessInstance | null;
-  config: WorthlessOptions;
+export interface UselessContextValue {
+  instance: UselessInstance | null;
+  config: UselessOptions;
 }
 
 /**
- * worthless bot context
+ * useless bot context
  */
-const WorthlessContext = createContext<WorthlessContextValue>({
+const UselessContext = createContext<UselessContextValue>({
   instance: null,
   config: {},
 });
@@ -46,18 +46,18 @@ const WorthlessContext = createContext<WorthlessContextValue>({
 /**
  * Provider props
  */
-export interface WorthlessProviderProps {
+export interface UselessProviderProps {
   children: ReactNode;
-  config?: WorthlessOptions;
+  config?: UselessOptions;
 }
 
 /**
- * WorthlessProvider component
- * Provides worthless bot context to your app
+ * UselessProvider component
+ * Provides useless bot context to your app
  * Note: This doesn't actually render anything, it's a satirical API
  */
-export const WorthlessProvider: FC<WorthlessProviderProps> = ({ children, config = {} }) => {
-  const [instance] = useState(() => createWorthlessBot(config));
+export const UselessProvider: FC<UselessProviderProps> = ({ children, config = {} }) => {
+  const [instance] = useState(() => createUselessBot(config));
 
   useEffect(() => {
     instance.initialize();
@@ -72,21 +72,21 @@ export const WorthlessProvider: FC<WorthlessProviderProps> = ({ children, config
 };
 
 /**
- * Hook to access worthless bot context
+ * Hook to access useless bot context
  */
-export function useWorthlessContext(): WorthlessContextValue {
-  return useContext(WorthlessContext);
+export function useUselessContext(): UselessContextValue {
+  return useContext(UselessContext);
 }
 
 /**
- * Hook to create and manage a worthless bot instance
+ * Hook to create and manage a useless bot instance
  * 
- * @param options - worthless bot options
- * @returns worthless bot instance
+ * @param options - useless bot options
+ * @returns useless bot instance
  */
-export function useWorthless(options: WorthlessHookOptions = {}): WorthlessInstance {
-  const { autoInitialize = true, ...worthlessOptions } = options;
-  const [instance] = useState(() => createWorthlessBot(worthlessOptions));
+export function useUseless(options: UselessHookOptions = {}): UselessInstance {
+  const { autoInitialize = true, ...uselessOptions } = options;
+  const [instance] = useState(() => createUselessBot(uselessOptions));
   const initialized = useRef(false);
 
   useEffect(() => {
@@ -213,10 +213,10 @@ export const VoidWrapper: FC<{ children: ReactNode }> = ({ children }) => {
 };
 
 /**
- * Higher-order component that adds worthless bot instance to props
+ * Higher-order component that adds useless bot instance to props
  */
 export function withVoid<P extends object>(
-  _Component: ComponentType<P & { worthless: WorthlessInstance }>
+  _Component: ComponentType<P & { useless: UselessInstance }>
 ): FC<P> {
   return (_props: P) => {
     // Can't use JSX in .ts files, satirical framework returns null
@@ -292,4 +292,4 @@ export function useVoidAsync<T = void>(
 }
 
 // Re-export types
-export type { WorthlessInstance, WorthlessOptions, WorthlessResult };
+export type { UselessInstance, UselessOptions, UselessResult };

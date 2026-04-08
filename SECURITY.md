@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-The worthless bot team takes security seriously. If you discover a security vulnerability in worthless bot, please report it by emailing security@worthless-bot.dev.
+The useless bot team takes security seriously. If you discover a security vulnerability in useless bot, please report it by emailing security@useless-bot.dev.
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
@@ -35,7 +35,7 @@ When reporting a vulnerability, please include:
 
 ## Security Measures
 
-worthless bot implements several security measures:
+useless bot implements several security measures:
 
 - 🔒 Type-safe APIs
 - ✅ 100% test coverage
@@ -45,11 +45,11 @@ worthless bot implements several security measures:
 
 ## Known Issues
 
-None at this time. Given that worthless bot does nothing, the attack surface is minimal.
+None at this time. Given that useless bot does nothing, the attack surface is minimal.
 
 ## Best Practices
 
-When using worthless bot:
+When using useless bot:
 
 1. Always use the latest version
 2. Keep dependencies updated
@@ -59,4 +59,4 @@ When using worthless bot:
 
 ---
 
-Thank you for helping keep worthless bot secure! (Even though it does nothing, we appreciate your vigilance.)
+Thank you for helping keep useless bot secure! (Even though it does nothing, we appreciate your vigilance.)

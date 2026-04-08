@@ -1,5 +1,5 @@
-# @worthless/config
+# @useless/config
 
-Configuration management for worthless bot. Manage nothing, systematically.
+Configuration management for useless bot. Manage nothing, systematically.
 
 ## Coming Soon

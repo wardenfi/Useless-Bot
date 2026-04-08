@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/core",
+  "name": "@useless/core",
   "version": "0.0.0",
-  "description": "Core framework functionality for worthless bot",
+  "description": "Core framework functionality for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -22,13 +22,13 @@
     "clean": "rm -rf dist"
   },
   "keywords": [
-    "worthless",
+    "useless",
     "bot",
     "framework",
     "core",
     "nothing"
   ],
-  "author": "The worthless bot Team",
+  "author": "The useless bot Team",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/client",
+  "name": "@useless/client",
   "version": "0.0.0",
-  "description": "Client library for worthless bot",
+  "description": "Client library for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["worthless", "bot", "client"],
-  "author": "The worthless bot Team",
+  "keywords": ["useless", "bot", "client"],
+  "author": "The useless bot Team",
   "license": "MIT"
 }

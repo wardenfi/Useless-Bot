@@ -1,40 +1,40 @@
 # API Reference
 
-Complete API documentation for worthless bot.
+Complete API documentation for useless bot.
 
-## @worthless/core
+## @useless/core
 
-### `createWorthlessBot(options?)`
+### `createUselessBot(options?)`
 
-Creates a new worthless bot instance.
+Creates a new useless bot instance.
 
 **Parameters:**
-- `options` (`WorthlessOptions`): Configuration options
+- `options` (`UselessOptions`): Configuration options
 
-**Returns:** `WorthlessInstance`
+**Returns:** `UselessInstance`
 
 **Example:**
 ```typescript
-const app = createWorthlessBot({
+const app = createUselessBot({
   mode: 'production',
   debug: false,
   plugins: []
 });
 ```
 
-### `WorthlessInstance`
+### `UselessInstance`
 
-The main worthless bot instance interface.
+The main useless bot instance interface.
 
 #### Methods
 
 ##### `initialize(): Promise<void>`
 
-Initializes the worthless bot instance.
+Initializes the useless bot instance.
 
 **Returns:** Promise that resolves when initialization is complete
 
-**Throws:** `WorthlessError` if already initialized
+**Throws:** `UselessError` if already initialized
 
 **Example:**
 ```typescript
@@ -43,11 +43,11 @@ await app.initialize();
 
 ##### `run(): Promise<void>`
 
-Runs the worthless bot operation.
+Runs the useless bot operation.
 
 **Returns:** Promise that resolves when operation is complete
 
-**Throws:** `WorthlessError` if not initialized
+**Throws:** `UselessError` if not initialized
 
 **Example:**
 ```typescript
@@ -56,7 +56,7 @@ await app.run();
 
 ##### `destroy(): Promise<void>`
 
-Destroys the worthless bot instance and cleans up resources.
+Destroys the useless bot instance and cleans up resources.
 
 **Returns:** Promise that resolves when destroyed
 
@@ -67,7 +67,7 @@ await app.destroy();
 
 ##### `getResult(): undefined`
 
-Gets the result of the worthless bot operation.
+Gets the result of the useless bot operation.
 
 **Returns:** Always returns `undefined`
 
@@ -76,9 +76,9 @@ Gets the result of the worthless bot operation.
 const result = app.getResult(); // undefined
 ```
 
-##### `getStatus(): WorthlessStatus`
+##### `getStatus(): UselessStatus`
 
-Gets the current status of the worthless bot instance.
+Gets the current status of the useless bot instance.
 
 **Returns:** Status string: `'idle' | 'initializing' | 'ready' | 'running' | 'destroyed'``
 
@@ -87,9 +87,9 @@ Gets the current status of the worthless bot instance.
 console.log(app.getStatus()); // 'ready'
 ```
 
-##### `getConfig(): WorthlessOptions`
+##### `getConfig(): UselessOptions`
 
-Gets the configuration of the worthless bot instance.
+Gets the configuration of the useless bot instance.
 
 **Returns:** Configuration object
 

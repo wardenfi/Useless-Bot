@@ -18,7 +18,7 @@ import {
   safeJsonParse,
 } from './index';
 
-describe('@worthless/utils', () => {
+describe('@useless/utils', () => {
   describe('noop', () => {
     it('should do nothing', () => {
       const result = noop();

@@ -24,7 +24,7 @@ vaporware/
 │       └── README.md
 │
 ├── packages/
-│   ├── core/                        # @worthless/core - Core framework
+│   ├── core/                        # @useless/core - Core framework
 │   │   ├── src/
 │   │   │   ├── index.ts
 │   │   │   └── index.test.ts
@@ -33,7 +33,7 @@ vaporware/
 │   │   ├── CHANGELOG.md
 │   │   └── README.md
 │   │
-│   ├── cli/                         # @worthless/cli - Command-line interface
+│   ├── cli/                         # @useless/cli - Command-line interface
 │   │   ├── src/
 │   │   │   ├── cli.ts
 │   │   │   └── index.ts
@@ -41,7 +41,7 @@ vaporware/
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── utils/                       # @worthless/utils - Utility functions
+│   ├── utils/                       # @useless/utils - Utility functions
 │   │   ├── src/
 │   │   │   ├── index.ts
 │   │   │   └── index.test.ts
@@ -49,52 +49,52 @@ vaporware/
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── types/                       # @worthless/types - TypeScript types
+│   ├── types/                       # @useless/types - TypeScript types
 │   │   ├── src/
 │   │   │   └── index.ts
 │   │   ├── package.json
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── logger/                      # @worthless/logger - Logging framework
+│   ├── logger/                      # @useless/logger - Logging framework
 │   │   ├── src/
 │   │   │   └── index.ts
 │   │   ├── package.json
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── react/                       # @worthless/react - React integration
+│   ├── react/                       # @useless/react - React integration
 │   │   ├── src/
 │   │   │   └── index.ts
 │   │   ├── package.json
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── api/                         # @worthless/api - REST API (stub)
+│   ├── api/                         # @useless/api - REST API (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── sdk/                         # @worthless/sdk - SDK (stub)
+│   ├── sdk/                         # @useless/sdk - SDK (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── client/                      # @worthless/client - Client library (stub)
+│   ├── client/                      # @useless/client - Client library (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── server/                      # @worthless/server - Server (stub)
+│   ├── server/                      # @useless/server - Server (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── config/                      # @worthless/config - Configuration (stub)
+│   ├── config/                      # @useless/config - Configuration (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── plugin-cache/               # @worthless/plugin-cache - Cache plugin (stub)
+│   ├── plugin-cache/               # @useless/plugin-cache - Cache plugin (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   └── plugin-analytics/           # @worthless/plugin-analytics - Analytics (stub)
+│   └── plugin-analytics/           # @useless/plugin-analytics - Analytics (stub)
 │       ├── package.json
 │       └── README.md
 │
@@ -119,21 +119,21 @@ vaporware/
 ## Package Status
 
 ### ✅ Complete Packages (Fully Implemented)
-- `@worthless/core` - Core framework with full implementation & tests
-- `@worthless/cli` - Working command-line interface with all commands
-- `@worthless/utils` - Complete utility library with tests
-- `@worthless/types` - Comprehensive TypeScript type definitions
-- `@worthless/logger` - Full-featured logging framework
-- `@worthless/react` - React hooks and components
+- `@useless/core` - Core framework with full implementation & tests
+- `@useless/cli` - Working command-line interface with all commands
+- `@useless/utils` - Complete utility library with tests
+- `@useless/types` - Comprehensive TypeScript type definitions
+- `@useless/logger` - Full-featured logging framework
+- `@useless/react` - React hooks and components
 
 ### 📦 Stub Packages (Ready to Expand)
-- `@worthless/api` - REST API framework
-- `@worthless/sdk` - Software development kit
-- `@worthless/client` - Client library
-- `@worthless/server` - Server implementation
-- `@worthless/config` - Configuration management
-- `@worthless/plugin-cache` - Caching plugin
-- `@worthless/plugin-analytics` - Analytics plugin
+- `@useless/api` - REST API framework
+- `@useless/sdk` - Software development kit
+- `@useless/client` - Client library
+- `@useless/server` - Server implementation
+- `@useless/config` - Configuration management
+- `@useless/plugin-cache` - Caching plugin
+- `@useless/plugin-analytics` - Analytics plugin
 
 ## Key Features
 

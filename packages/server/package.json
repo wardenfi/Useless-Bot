@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/server",
+  "name": "@useless/server",
   "version": "0.0.0",
-  "description": "Server implementation for worthless bot",
+  "description": "Server implementation for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["worthless", "bot", "server"],
-  "author": "The worthless bot Team",
+  "keywords": ["useless", "bot", "server"],
+  "author": "The useless bot Team",
   "license": "MIT"
 }

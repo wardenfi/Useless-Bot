@@ -1,10 +1,10 @@
 # Core Concepts
 
-Understanding the fundamental concepts of worthless bot.
+Understanding the fundamental concepts of useless bot.
 
-## The worthless bot Lifecycle
+## The useless bot Lifecycle
 
-Every worthless bot application follows a predictable lifecycle:
+Every useless bot application follows a predictable lifecycle:
 
 ```
 idle → initializing → ready → running → ready → destroyed
@@ -14,12 +14,12 @@ idle → initializing → ready → running → ready → destroyed
 
 1. **Idle**: Initial state after creation
 2. **Initializing**: Plugins and configuration loading
-3. **Ready**: worthless bot is ready to run
+3. **Ready**: useless bot is ready to run
 4. **Running**: Actively doing nothing
-5. **Destroyed**: worthless bot has been cleaned up
+5. **Destroyed**: useless bot has been cleaned up
 
 ```typescript
-const app = createWorthlessBot();
+const app = createUselessBot();
 
 console.log(app.getStatus()); // 'idle'
 
@@ -35,10 +35,10 @@ console.log(app.getStatus()); // 'destroyed'
 
 ## Plugin System
 
-Extend worthless bot's nothingness with plugins:
+Extend useless bot's nothingness with plugins:
 
 ```typescript
-const myPlugin: WorthlessPlugin = {
+const myPlugin: UselessPlugin = {
   name: 'my-plugin',
   version: '1.0.0',
   async initialize(instance) {
@@ -46,7 +46,7 @@ const myPlugin: WorthlessPlugin = {
   }
 };
 
-const app = createWorthlessBot({
+const app = createUselessBot({
   plugins: [myPlugin]
 });
 ```
@@ -54,14 +54,14 @@ const app = createWorthlessBot({
 ### Creating a Plugin
 
 ```typescript
-import type { WorthlessPlugin, WorthlessInstance } from '@worthless/core';
+import type { UselessPlugin, UselessInstance } from '@useless/core';
 
-export function createMyPlugin(options = {}): WorthlessPlugin {
+export function createMyPlugin(options = {}): UselessPlugin {
   return {
     name: 'my-plugin',
     version: '1.0.0',
     
-    async initialize(instance: WorthlessInstance) {
+    async initialize(instance: UselessInstance) {
       // Setup plugin
       console.log('Plugin initialized');
     }
@@ -71,14 +71,14 @@ export function createMyPlugin(options = {}): WorthlessPlugin {
 
 ## Configuration
 
-worthless bot is designed to work without configuration, but supports extensive customization:
+useless bot is designed to work without configuration, but supports extensive customization:
 
 ### Core Configuration
 
 ```typescript
-import { createWorthlessBot } from '@worthless/core';
+import { createUselessBot } from '@useless/core';
 
-const app = createWorthlessBot({
+const app = createUselessBot({
   // Environment mode
   mode: 'production', // 'development' | 'production'
   
@@ -99,9 +99,9 @@ VOID_DEBUG=false
 ```
 
 ```typescript
-const app = createWorthlessBot({
-  mode: process.env.WORTHLESS_MODE,
-  debug: process.env.WORTHLESS_DEBUG === 'true'
+const app = createUselessBot({
+  mode: process.env.USELESS_MODE,
+  debug: process.env.USELESS_DEBUG === 'true'
 });
 ```
 
@@ -111,23 +111,23 @@ Void provides comprehensive TypeScript types:
 
 ```typescript
 import type {
-  Worthless,
+  Useless,
   Nothing,
-  WorthlessResult,
-  WorthlessCallback,
-  WorthlessPromise
-} from '@worthless/types';
+  UselessResult,
+  UselessCallback,
+  UselessPromise
+} from '@useless/types';
 
 // Type-safe nothing
-const value: WorthlessResult = undefined;
+const value: UselessResult = undefined;
 
 // Type-safe callbacks
-const callback: WorthlessCallback = () => {
+const callback: UselessCallback = () => {
   // Return nothing
 };
 
 // Type-safe promises
-const promise: WorthlessPromise = Promise.resolve();
+const promise: UselessPromise = Promise.resolve();
 ```
 
 ## Error Handling
@@ -135,13 +135,13 @@ const promise: WorthlessPromise = Promise.resolve();
 Even nothing can have errors (theoretically):
 
 ```typescript
-import { WorthlessError } from '@worthless/core';
+import { UselessError } from '@useless/core';
 
 try {
   await app.run();
 } catch (error) {
-  if (error instanceof WorthlessError) {
-    console.error('Worthless bot error:', error.message);
+  if (error instanceof UselessError) {
+    console.error('Useless bot error:', error.message);
   }
 }
 ```
@@ -149,10 +149,10 @@ try {
 ### Custom Errors
 
 ```typescript
-class MyWorthlessError extends WorthlessError {
+class MyUselessError extends UselessError {
   constructor(message: string) {
     super(message);
-    this.name = 'MyWorthlessError';
+    this.name = 'MyUselessError';
   }
 }
 ```
@@ -162,7 +162,7 @@ class MyWorthlessError extends WorthlessError {
 Essential utilities for working with nothing:
 
 ```typescript
-import { noop, identity, constant, sleep } from '@worthless/utils';
+import { noop, identity, constant, sleep } from '@useless/utils';
 
 // Do nothing
 noop();
@@ -183,7 +183,7 @@ await sleep(1000);
 Beautiful logs for nothing:
 
 ```typescript
-import { createLogger } from '@worthless/logger';
+import { createLogger } from '@useless/logger';
 
 const logger = createLogger({ level: 'info' });
 
@@ -198,11 +198,11 @@ Test your nothing with confidence:
 
 ```typescript
 import { describe, it, expect } from 'vitest';
-import { createWorthlessBot } from '@worthless/core';
+import { createUselessBot } from '@useless/core';
 
-describe('My Worthless Bot App', () => {
+describe('My Useless Bot App', () => {
   it('should do nothing', async () => {
-    const app = createWorthlessBot();
+    const app = createUselessBot();
     await app.initialize();
     await app.run();
     
@@ -222,13 +222,13 @@ await app.initialize();
 await app.run();
 
 // ❌ Bad
-await app.run(); // Throws WorthlessError
+await app.run(); // Throws UselessError
 ```
 
 ### 2. Clean Up Resources
 
 ```typescript
-const app = createWorthlessBot();
+const app = createUselessBot();
 
 try {
   await app.initialize();
@@ -242,8 +242,8 @@ try {
 
 ```typescript
 // ✅ Good - Type-safe
-import type { WorthlessResult } from '@worthless/types';
-const result: WorthlessResult = app.getResult();
+import type { UselessResult } from '@useless/types';
+const result: UselessResult = app.getResult();
 
 // ❌ Less good - No type safety
 const result = app.getResult();
@@ -255,8 +255,8 @@ const result = app.getResult();
 try {
   await app.run();
 } catch (error) {
-  if (error instanceof WorthlessError) {
-    // Handle worthless bot-specific errors
+  if (error instanceof UselessError) {
+    // Handle useless bot-specific errors
   }
   throw error;
 }
@@ -269,9 +269,9 @@ try {
 You can create custom void implementations:
 
 ```typescript
-import type { WorthlessInstance, WorthlessOptions } from '@worthless/core';
+import type { UselessInstance, UselessOptions } from '@useless/core';
 
-export function createCustomWorthlessBot(options: WorthlessOptions): WorthlessInstance {
+export function createCustomUselessBot(options: UselessOptions): UselessInstance {
   // Your custom implementation
   return {
     async initialize() { /* ... */ },
@@ -298,12 +298,12 @@ Tips for optimal nothing:
 Debug your void applications:
 
 ```typescript
-const app = createWorthlessBot({ debug: true });
+const app = createUselessBot({ debug: true });
 
 // Logs will show lifecycle events
-await app.initialize(); // [Worthless] Initialized successfully
-await app.run();        // [Worthless] Running...
-                        // [Worthless] Complete!
+await app.initialize(); // [Useless] Initialized successfully
+await app.run();        // [Useless] Running...
+                        // [Useless] Complete!
 ```
 
 ## Next Steps

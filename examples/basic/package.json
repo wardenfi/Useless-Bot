@@ -1,15 +1,15 @@
 {
-  "name": "worthless-bot-example-basic",
+  "name": "useless-bot-example-basic",
   "version": "0.0.0",
   "private": true,
-  "description": "Basic example using worthless bot",
+  "description": "Basic example using useless bot",
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "tsup src/index.ts"
   },
   "dependencies": {
-    "@worthless/core": "workspace:*",
-    "@worthless/utils": "workspace:*"
+    "@useless/core": "workspace:*",
+    "@useless/utils": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.1",

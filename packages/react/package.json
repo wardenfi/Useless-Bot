@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/react",
+  "name": "@useless/react",
   "version": "0.0.0",
-  "description": "React integration for worthless bot",
+  "description": "React integration for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -12,16 +12,16 @@
     "lint": "eslint src/ --max-warnings 0 || exit 0"
   },
   "keywords": [
-    "worthless",
+    "useless",
     "bot",
     "react",
     "hooks"
   ],
-  "author": "The worthless bot Team",
+  "author": "The useless bot Team",
   "license": "MIT",
   "dependencies": {
-    "@worthless/core": "workspace:*",
-    "@worthless/types": "workspace:*"
+    "@useless/core": "workspace:*",
+    "@useless/types": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.0.0"

@@ -1,14 +1,14 @@
 {
-  "name": "@worthless/plugin-analytics",
+  "name": "@useless/plugin-analytics",
   "version": "0.0.0",
-  "description": "Analytics plugin for worthless bot",
+  "description": "Analytics plugin for useless bot",
   "main": "./dist/index.js",
   "scripts": {
     "build": "echo 'Nothing to build'",
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["worthless", "bot", "plugin", "analytics"],
-  "author": "The worthless bot Team",
+  "keywords": ["useless", "bot", "plugin", "analytics"],
+  "author": "The useless bot Team",
   "license": "MIT"
 }

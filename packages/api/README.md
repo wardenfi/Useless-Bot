@@ -1,17 +1,17 @@
-# @worthless/api
+# @useless/api
 
-REST API framework built on worthless bot. Create APIs that return nothing, beautifully.
+REST API framework built on useless bot. Create APIs that return nothing, beautifully.
 
 ## Installation
 
 ```bash
-npm install @worthless/api
+npm install @useless/api
 ```
 
 ## Usage
 
 ```typescript
-import { createApi } from '@worthless/api';
+import { createApi } from '@useless/api';
 
 const api = createApi({
   port: 3000,

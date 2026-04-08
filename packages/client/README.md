@@ -1,5 +1,5 @@
-# @worthless/client
+# @useless/client
 
-Universal client for worthless bot. Works in browsers, Node.js, and edge runtimes.
+Universal client for useless bot. Works in browsers, Node.js, and edge runtimes.
 
 ## Coming Soon

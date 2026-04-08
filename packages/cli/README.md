@@ -1,50 +1,50 @@
-# @worthless/cli
+# @useless/cli
 
-Command-line interface for worthless bot. Build nothing from the comfort of your terminal.
+Command-line interface for useless bot. Build nothing from the comfort of your terminal.
 
 ## Installation
 
 ```bash
-npm install -g @worthless/cli
+npm install -g @useless/cli
 # or
-yarn global add @worthless/cli
+yarn global add @useless/cli
 # or
-pnpm add -g @worthless/cli
+pnpm add -g @useless/cli
 ```
 
 ## Commands
 
-### `worthless init`
+### `useless init`
 
-Initialize a new worthless bot project in the current directory.
+Initialize a new useless bot project in the current directory.
 
 ```bash
-worthless init
-worthless init --name my-project
-worthless init --typescript
+useless init
+useless init --name my-project
+useless init --typescript
 ```
 
-### `worthless dev`
+### `useless dev`
 
 Start the development server (which does nothing, but in watch mode).
 
 ```bash
-worthless dev
-worthless dev --port 3000
-worthless dev --verbose
+useless dev
+useless dev --port 3000
+useless dev --verbose
 ```
 
-### `worthless build`
+### `useless build`
 
 Build your project for production.
 
 ```bash
-worthless build
-worthless build --minify
-worthless build --output dist
+useless build
+useless build --minify
+useless build --output dist
 ```
 
-### `worthless test`
+### `useless test`
 
 Run your test suite.
 

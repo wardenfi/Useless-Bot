@@ -1,7 +1,7 @@
 {
-  "name": "@worthless/sdk",
+  "name": "@useless/sdk",
   "version": "0.0.0",
-  "description": "Software Development Kit for worthless bot",
+  "description": "Software Development Kit for useless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,12 +10,12 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["worthless", "bot", "sdk"],
-  "author": "The worthless bot Team",
+  "keywords": ["useless", "bot", "sdk"],
+  "author": "The useless bot Team",
   "license": "MIT",
   "dependencies": {
-    "@worthless/core": "workspace:*",
-    "@worthless/types": "workspace:*",
-    "@worthless/utils": "workspace:*"
+    "@useless/core": "workspace:*",
+    "@useless/types": "workspace:*",
+    "@useless/utils": "workspace:*"
   }
 }

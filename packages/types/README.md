@@ -1,42 +1,42 @@
-# @worthless/types
+# @useless/types
 
-TypeScript type definitions for worthless bot. Because even nothing deserves proper types.
+TypeScript type definitions for useless bot. Because even nothing deserves proper types.
 
 ## Installation
 
 ```bash
-npm install @worthless/types
+npm install @useless/types
 ```
 
 ## Usage
 
 ```typescript
 import type {
-  Worthless,
-  WorthlessResult,
-  WorthlessCallback,
+  Useless,
+  UselessResult,
+  UselessCallback,
   Nothing,
   Nullish,
   Empty,
   Never
-} from '@worthless/types';
+} from '@useless/types';
 
 // Use types in your code
-const handleWorthless: WorthlessCallback = () => {
+const handleUseless: UselessCallback = () => {
   // Do nothing
 };
 
-const result: WorthlessResult = undefined;
+const result: UselessResult = undefined;
 ```
 
 ## Types
 
 ### Core Types
 
-#### `Worthless`
-Represents worthlessness (nothing).
+#### `Useless`
+Represents uselessness (nothing).
 ```typescript
-type Worthless = undefined;
+type Useless = undefined;
 ```
 
 #### `Nothing`

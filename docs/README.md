@@ -1,6 +1,6 @@
-# worthless bot Website
+# useless bot Website
 
-Satirical landing page and documentation for **w0rthless.fun**
+Satirical landing page and documentation for **uselessbot.fun**
 
 ## Files
 
@@ -14,9 +14,8 @@ These are standalone HTML files with embedded CSS. No build process, no dependen
 ### Hosting Options
 
 1. **Google Sites** - Copy/paste the HTML
-2. **GitHub Pages** - Push to gh-pages branch
-3. **Netlify/Vercel** - Drop the files and deploy
-4. **Any static host** - Works everywhere
+2. **Netlify/Vercel** - Drop the files and deploy
+3. **Any static host** - Works everywhere
 
 ### The Joke
 
@@ -34,9 +33,9 @@ It's a commentary on GitHub repos with 10k+ stars, elaborate documentation, prof
 ### Customize
 
 Update these references throughout:
-- Domain: `w0rthless.fun`
-- GitHub: `https://github.com/theworthlessbot/worthless-bot.git`
-- Project name: "worthless bot"
+- Domain: `uselessbot.fun`
+- GitHub: `https://github.com/wardenfi/Useless-Bot`
+- Project name: "useless bot"
 
 The humor works because it looks incredibly legitimate until you realize the entire thing is about doing nothing.
 

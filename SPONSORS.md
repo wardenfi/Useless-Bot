@@ -1,6 +1,6 @@
 ## Sponsors
 
-Thank you to our amazing sponsors for supporting the development of worthless bot!
+Thank you to our amazing sponsors for supporting the development of useless bot!
 
 ### 🥇 Gold Sponsors
 
@@ -57,7 +57,7 @@ A huge thank you to our individual supporters:
 
 ## Become a Sponsor
 
-Support the development of worthless bot and get your company logo here!
+Support the development of useless bot and get your company logo here!
 
 ### Sponsorship Tiers
 
@@ -94,9 +94,9 @@ Support the development of worthless bot and get your company logo here!
 
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsors-pink?logo=github)](https://github.com/sponsors/yourusername)
   
-[![Open Collective](https://img.shields.io/badge/Open-Collective-blue?logo=opencollective)](https://opencollective.com/worthless-bot)
+[![Open Collective](https://img.shields.io/badge/Open-Collective-blue?logo=opencollective)](https://opencollective.com/useless-bot)
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A-Coffee-orange?logo=buy-me-a-coffee)](https://buymeacoffee.com/worthlessbot)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A-Coffee-orange?logo=buy-me-a-coffee)](https://buymeacoffee.com/uselessbot)
 
 </div>
 
@@ -114,7 +114,7 @@ Your sponsorship helps us:
 
 ### Corporate Sponsorship
 
-Interested in corporate sponsorship? Contact us at sponsors@worthless-bot.dev for custom packages.
+Interested in corporate sponsorship? Contact us at sponsors@useless-bot.dev for custom packages.
 
 ### Sponsorship Benefits
 
@@ -128,7 +128,7 @@ All sponsors receive:
 
 ### Why Sponsor?
 
-- **Support Open Source**: Help keep worthless bot free and open
+- **Support Open Source**: Help keep useless bot free and open
 - **Strategic Value**: Influence the direction of a popular framework
 - **Visibility**: Get your brand in front of thousands of developers
 - **Recruitment**: Show you support the developer community
@@ -155,7 +155,7 @@ A: Possibly! Reach out to discuss.
 
 <div align="center">
 
-**Thank you for considering sponsoring worthless bot!**
+**Thank you for considering sponsoring useless bot!**
 
 Every contribution, big or small, helps us build nothing better.
 

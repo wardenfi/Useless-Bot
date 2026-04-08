@@ -1,81 +1,81 @@
 /**
- * @worthless/core - Core framework functionality
+ * @useless/core - Core framework functionality
  * 
- * The heart of worthless bot. Everything starts here, and ends here.
+ * The heart of useless bot. Everything starts here, and ends here.
  * Which is to say, it starts and ends with nothing.
  */
 
 /**
- * Configuration options for creating a worthless bot instance
+ * Configuration options for creating a useless bot instance
  */
-export interface WorthlessOptions {
+export interface UselessOptions {
   /** The mode to run in */
   mode?: 'development' | 'production';
   /** Enable debug logging */
   debug?: boolean;
   /** Plugins to load */
-  plugins?: WorthlessPlugin[];
+  plugins?: UselessPlugin[];
 }
 
 /**
- * A worthless bot plugin interface
+ * A useless bot plugin interface
  */
-export interface WorthlessPlugin {
+export interface UselessPlugin {
   name: string;
   version: string;
-  initialize: (instance: WorthlessInstance) => Promise<void> | void;
+  initialize: (instance: UselessInstance) => Promise<void> | void;
 }
 
 /**
- * The worthless bot instance interface
+ * The useless bot instance interface
  */
-export interface WorthlessInstance {
-  /** Initialize the worthless bot */
+export interface UselessInstance {
+  /** Initialize the useless bot */
   initialize: () => Promise<void>;
-  /** Run the worthless bot */
+  /** Run the useless bot */
   run: () => Promise<void>;
-  /** Destroy the worthless bot */
+  /** Destroy the useless bot */
   destroy: () => Promise<void>;
-  /** Get the result of running the worthless bot */
+  /** Get the result of running the useless bot */
   getResult: () => undefined;
   /** Get the current status */
   getStatus: () => 'idle' | 'initializing' | 'ready' | 'running' | 'destroyed';
   /** Get the configuration */
-  getConfig: () => WorthlessOptions;
+  getConfig: () => UselessOptions;
 }
 
 /**
- * Base error class for worthless bot-related errors
+ * Base error class for useless bot-related errors
  */
-export class WorthlessError extends Error {
+export class UselessError extends Error {
   constructor(message: string) {
     super(message);
-    this.name = 'WorthlessError';
+    this.name = 'UselessError';
     // You will own nothing and be happy
   }
 }
 
 /**
- * Creates a new worthless bot instance
+ * Creates a new useless bot instance
  * 
  * @param options - Configuration options
- * @returns A new WorthlessInstance
+ * @returns A new UselessInstance
  * 
  * @example
  * ```typescript
- * const app = createWorthlessBot({ mode: 'production' });
+ * const app = createUselessBot({ mode: 'production' });
  * await app.initialize();
  * await app.run();
  * ```
  */
-export function createWorthlessBot(options: WorthlessOptions = {}): WorthlessInstance {
-  const config: WorthlessOptions = {
+export function createUselessBot(options: UselessOptions = {}): UselessInstance {
+  const config: UselessOptions = {
     mode: options.mode ?? 'development',
     debug: options.debug ?? false,
     plugins: options.plugins ?? [],
   };
 
-  let status: WorthlessInstance['getStatus'] extends () => infer R ? R : never = 'idle';
+  let status: UselessInstance['getStatus'] extends () => infer R ? R : never = 'idle';
 
   return {
     async initialize() {
@@ -92,13 +92,13 @@ export function createWorthlessBot(options: WorthlessOptions = {}): WorthlessIns
       status = 'ready';
       
       if (config.debug) {
-        console.log('[worthless bot] Initialized successfully');
+        console.log('[useless bot] Initialized successfully');
       }
     },
 
     async run() {
       if (status !== 'ready') {
-        throw new WorthlessError('worthless bot must be initialized before running');
+        throw new UselessError('useless bot must be initialized before running');
       }
       
       status = 'running';
@@ -107,8 +107,8 @@ export function createWorthlessBot(options: WorthlessOptions = {}): WorthlessIns
       await new Promise(resolve => setTimeout(resolve, 10));
       
       if (config.debug) {
-        console.log('[worthless bot] Running...');
-        console.log('[worthless bot] Complete!');
+        console.log('[useless bot] Running...');
+        console.log('[useless bot] Complete!');
       }
       
       status = 'ready';
@@ -118,7 +118,7 @@ export function createWorthlessBot(options: WorthlessOptions = {}): WorthlessIns
       status = 'destroyed';
       
       if (config.debug) {
-        console.log('[worthless bot] Destroyed');
+        console.log('[useless bot] Destroyed');
       }
     },
 
@@ -137,12 +137,12 @@ export function createWorthlessBot(options: WorthlessOptions = {}): WorthlessIns
 }
 
 /**
- * Checks if a value is a worthless bot instance
+ * Checks if a value is a useless bot instance
  * 
  * @param value - The value to check
- * @returns True if the value is a WorthlessInstance
+ * @returns True if the value is a UselessInstance
  */
-export function isWorthless(value: unknown): value is WorthlessInstance {
+export function isUseless(value: unknown): value is UselessInstance {
   return (
     typeof value === 'object' &&
     value !== null &&

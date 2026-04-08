@@ -10,11 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.0] - 2026-03-02
 
 ### Added
-- 🎉 Initial release of worthless bot
-- Core packages: `@worthless/core`, `@worthless/utils`, `@worthless/types`
-- Interface packages: `@worthless/cli`, `@worthless/api`, `@worthless/sdk`
-- Integration packages: `@worthless/react`, `@worthless/vue`, `@worthless/express`
-- Plugin packages: `@worthless/plugin-*`
+- 🎉 Initial release of useless bot
+- Core packages: `@useless/core`, `@useless/utils`, `@useless/types`
+- Interface packages: `@useless/cli`, `@useless/api`, `@useless/sdk`
+- Integration packages: `@useless/react`, `@useless/vue`, `@useless/express`
+- Plugin packages: `@useless/plugin-*`
 - Comprehensive documentation
 - 100% test coverage
 - TypeScript support
@@ -94,5 +94,5 @@ Thank you to our contributors, sponsors, and the entire community for supporting
 
 For detailed changes in each package, see their individual CHANGELOG.md files.
 
-[Unreleased]: https://github.com/yourusername/worthless-bot/compare/v0.0.0...HEAD
-[0.0.0]: https://github.com/yourusername/worthless-bot/releases/tag/v0.0.0
+[Unreleased]: https://github.com/yourusername/useless-bot/compare/v0.0.0...HEAD
+[0.0.0]: https://github.com/yourusername/useless-bot/releases/tag/v0.0.0

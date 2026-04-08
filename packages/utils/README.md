@@ -1,17 +1,17 @@
-# @worthless/utils
+# @useless/utils
 
-Essential utility functions for worthless bot. When you need to do nothing, use these utilities.
+Essential utility functions for useless bot. When you need to do nothing, use these utilities.
 
 ## Installation
 
 ```bash
-npm install @worthless/utils
+npm install @useless/utils
 ```
 
 ## Usage
 
 ```typescript
-import { noop, identity, constant, pipe, compose } from '@worthless/utils';
+import { noop, identity, constant, pipe, compose } from '@useless/utils';
 
 // Use noop for callbacks that do nothing
 setTimeout(noop, 1000);

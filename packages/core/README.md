@@ -1,32 +1,32 @@
-# @worthless/core
+# @useless/core
 
-The core framework functionality for worthless bot. This package provides the fundamental building blocks for creating nothing.
+The core framework functionality for useless bot. This package provides the fundamental building blocks for creating nothing.
 
 ## Installation
 
 ```bash
-npm install @worthless/core
+npm install @useless/core
 # or
-yarn add @worthless/core
+yarn add @useless/core
 # or
-pnpm add @worthless/core
+pnpm add @useless/core
 ```
 
 ## Usage
 
 ```typescript
-import { createWorthlessBot, WorthlessOptions } from '@worthless/core';
+import { createUselessBot, UselessOptions } from '@useless/core';
 
-// Create a new worthless bot instance
-const app = createWorthlessBot({
+// Create a new useless bot instance
+const app = createUselessBot({
   mode: 'production',
   debug: false
 });
 
-// Initialize worthless bot
+// Initialize useless bot
 await app.initialize();
 
-// Run worthless bot
+// Run useless bot
 await app.run();
 
 // Get the result (spoiler: it's nothing)
@@ -36,9 +36,9 @@ console.log(result); // undefined
 
 ## API
 
-### `createWorthlessBot(options?): WorthlessInstance`
+### `createUselessBot(options?): UselessInstance`
 
-Creates a new worthless bot instance with optional configuration.
+Creates a new useless bot instance with optional configuration.
 
 #### Options
 
@@ -56,30 +56,30 @@ A `VoidInstance` with the following methods:
 - `getResult()` - Gets the result (always `undefined`)
 - `getStatus()` - Gets the current status (always `'ready'`)
 
-### `isWorthless(value): boolean`
+### `isUseless(value): boolean`
 
-Checks if a value is a worthless bot instance.
+Checks if a value is a useless bot instance.
 
 ```typescript
-import { createWorthlessBot, isWorthless } from '@worthless/core';
+import { createUselessBot, isUseless } from '@useless/core';
 
-const app = createWorthlessBot();
-console.log(isWorthless(app)); // true
-console.log(isWorthless({})); // false
+const app = createUselessBot();
+console.log(isUseless(app)); // true
+console.log(isUseless({})); // false
 ```
 
-### `WorthlessError`
+### `UselessError`
 
-The base error class for all worthless bot-related errors. Useful for error handling in your nothing.
+The base error class for all useless bot-related errors. Useful for error handling in your nothing.
 
 ```typescript
-import { WorthlessError } from '@worthless/core';
+import { UselessError } from '@useless/core';
 
 try {
   // Your code that does nothing
 } catch (error) {
-  if (error instanceof WorthlessError) {
-    // Handle worthless bot-specific errors
+  if (error instanceof UselessError) {
+    // Handle useless bot-specific errors
   }
 }
 ```
@@ -89,10 +89,10 @@ try {
 ### Basic Example
 
 ```typescript
-import { createWorthlessBot } from '@worthless/core';
+import { createUselessBot } from '@useless/core';
 
 async function main() {
-  const app = createWorthlessBot();
+  const app = createUselessBot();
   await app.initialize();
   await app.run();
   
@@ -105,9 +105,9 @@ main();
 ### With Options
 
 ```typescript
-import { createWorthlessBot } from '@worthless/core';
+import { createUselessBot } from '@useless/core';
 
-const app = createWorthlessBot({
+const app = createUselessBot({
   mode: 'production',
   debug: true,
   plugins: []
