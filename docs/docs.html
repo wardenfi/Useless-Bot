@@ -3,228 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete documentation for Useless Bot - the autonomous AI agent framework for achieving nothing at scale.">
+    <meta name="keywords" content="useless bot, documentation, AI agents, autonomous systems, API, framework">
+    <meta name="author" content="The useless bot Team">
+    <meta property="og:title" content="useless bot - Complete Documentation">
+    <meta property="og:description" content="Technical documentation for the ultimate framework for doing nothing">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uselessbot.fun/docs.html">
     <title>useless bot - Complete Documentation</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #c7d5e0;
-            color: #333;
-            font-family: 'Courier New', monospace;
-            line-height: 1.8;
-        }
-
-        .container {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        .sidebar {
-            width: 280px;
-            background: #b5c5d3;
-            border-right: 1px solid #999;
-            padding: 20px;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        .sidebar h2 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-            border-bottom: 1px solid #999;
-            padding-bottom: 10px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-        }
-
-        .sidebar li {
-            margin: 8px 0;
-        }
-
-        .sidebar a {
-            color: #333;
-            text-decoration: underline;
-            display: block;
-            padding: 5px 0;
-            font-size: 0.85rem;
-        }
-
-        .sidebar a:hover {
-            color: #000;
-        }
-
-        .main-content {
-            margin-left: 280px;
-            padding: 40px;
-            flex: 1;
-            max-width: 900px;
-        }
-
-        .breadcrumb {
-            color: #666;
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-        }
-
-        .back-link {
-            color: #333;
-            text-decoration: underline;
-            font-size: 0.9rem;
-        }
-
-        .back-link:hover {
-            color: #000;
-        }
-            letter-spacing: 6px;
-            color: #00ff41;
-            text-shadow: 0 0 10px #00ff41;
-            margin-bottom: 10px;
-        }
-
-        .breadcrumb {
-            color: #00cc33;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
-
-        h1 {
-            color: #333;
-            font-size: 2rem;
-            margin: 40px 0 20px 0;
-            border-bottom: 1px solid #999;
-            padding-bottom: 15px;
-        }
-
-        h2 {
-            color: #333;
-            font-size: 1.4rem;
-            margin: 30px 0 15px 0;
-        }
-
-        h3 {
-            color: #555;
-            font-size: 1.1rem;
-            margin: 25px 0 15px 0;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .info-box {
-            background: #f5f5f5;
-            border: 1px solid #999;
-            padding: 20px;
-            margin: 25px 0;
-            border-left: 3px solid #666;
-        }
-
-        .info-box strong {
-            color: #333;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .warning-box {
-            background: #fff;
-            border: 1px solid #999;
-            padding: 20px;
-            margin: 25px 0;
-            color: #666;
-            border-left: 3px solid #999;
-        }
-
-        .warning-box strong {
-            color: #333;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .code-block {
-            background: #f5f5f5;
-            border: 1px solid #999;
-            padding: 20px;
-            margin: 20px 0;
-            overflow-x: auto;
-            color: #333;
-            white-space: pre;
-            font-size: 0.85rem;
-        }
-
-        code {
-            background: #f5f5f5;
-            padding: 2px 8px;
-            border: 1px solid #ddd;
-            color: #333;
-        }
-
-        ul, ol {
-            margin: 15px 0 15px 30px;
-            color: #555;
-        }
-
-        li {
-            margin: 8px 0;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 25px 0;
-        }
-
-        .feature-card {
-            background: #fff;
-            border: 1px solid #999;
-            padding: 20px;
-        }
-
-        .feature-card h4 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-        }
-
-        th, td {
-            border: 1px solid #999;
-            padding: 12px;
-            text-align: left;
-            font-size: 0.85rem;
-        }
-
-        th {
-            background: #f5f5f5;
-            color: #333;
-        }
-
-        td {
-            color: #555;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/docs.css">
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <div style="font-size: 1rem; text-align: center; margin-bottom: 20px; font-weight: bold;">useless bot</div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="docs-container">
+        <nav class="sidebar" aria-label="Documentation navigation">
+            <div class="sidebar-title">useless bot</div>
             
             <h2>[getting started]</h2>
             <ul>
@@ -266,12 +61,12 @@
             </ul>
         </nav>
 
-        <main class="main-content">
-            <div class="breadcrumb">
+        <main class="main-content" id="main-content">
+            <div class="breadcrumb" role="status" aria-label="Current location">
                 root@useless:~/useless-bot/docs$ cat complete_documentation.md
             </div>
 
-            <a href="index.html" class="back-link">← back to home</a>
+            <a href="index.html" class="back-link" aria-label="Back to home page">← back to home</a>
 
             <h1>useless bot documentation</h1>
             <p>Welcome to the complete technical documentation for useless bot, the first autonomous AI agent framework designed specifically for achieving absolute zero at scale. By leveraging cutting-edge LLM reasoning and multi-agent orchestration, we create a sustainable mechanism for doing nothing when you need to do nothing the most.</p>
@@ -939,7 +734,7 @@ await vote({
                 <p>Join our thriving community of people who appreciate doing nothing:</p>
 
                 <ul>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/wardenfi/Useless-Bot" style="color: #00ffff;">github.com/wardenfi/Useless-Bot</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/wardenfi/Useless-Bot" class="cyan-link">github.com/wardenfi/Useless-Bot</a></li>
                     <li><strong>Discord:</strong> Not created yet (and never will be)</li>
                     <li><strong>Twitter:</strong> @uselessb0t (doesn't exist)</li>
                     <li><strong>Forum:</strong> forum.uselessbot.fun (blank page)</li>
@@ -947,7 +742,7 @@ await vote({
 
                 <div class="info-box">
                     <strong>[COMMUNITY STATS]</strong>
-                    <ul style="margin-top: 15px;">
+                    <ul>
                         <li>Active Members: 0</li>
                         <li>Daily Active Users: 0</li>
                         <li>Total Transactions: 0</li>
@@ -977,35 +772,35 @@ cd Useless-Bot
 # Go outside</div>
             </section>
 
-            <div style="border: 2px solid #00ff41; padding: 40px; margin: 60px 0; text-align: center; background: #001a0d;">
-                <h2 style="color: #00ffff; margin-bottom: 20px;">THE TRUTH ABOUT NOTHING</h2>
-                <p style="color: #00cc33; font-size: 1.1rem; margin-bottom: 15px;">
+            <section class="truth-box" aria-labelledby="truth-heading">
+                <h2 id="truth-heading">THE TRUTH ABOUT NOTHING</h2>
+                <p>
                     This entire documentation is a satirical art project mocking the modern tech ecosystem where:
                 </p>
-                <ul style="list-style: none; text-align: left; max-width: 800px; margin: 20px auto;">
-                    <li style="margin: 10px 0;">→ READMEs are longer than the codebase</li>
-                    <li style="margin: 10px 0;">→ Marketing speak drowns out actual utility</li>
-                    <li style="margin: 10px 0;">→ GitHub stars equal perceived value</li>
-                    <li style="margin: 10px 0;">→ "Coming soon" is a perpetual state</li>
-                    <li style="margin: 10px 0;">→ Documentation promises revolutions while delivering void</li>
+                <ul>
+                    <li>→ READMEs are longer than the codebase</li>
+                    <li>→ Marketing speak drowns out actual utility</li>
+                    <li>→ GitHub stars equal perceived value</li>
+                    <li>→ "Coming soon" is a perpetual state</li>
+                    <li>→ Documentation promises revolutions while delivering void</li>
                 </ul>
-                <p style="color: #00cc33; font-size: 1.1rem; margin-top: 20px;">
+                <p>
                     If this documentation made you laugh, made you think, or made you uncomfortable, it succeeded.
                 </p>
-                <p style="color: #00ffff; font-size: 1.3rem; margin-top: 30px; font-weight: bold;">
+                <p class="emphasis">
                     Own Nothing. Do Nothing. Be Nothing.
                 </p>
+            </section>
+
+            <div class="back-to-home">
+                <a href="index.html" class="back-link" aria-label="Navigate back to home page">← back to home</a>
             </div>
 
-            <div style="text-align: center; padding: 40px; margin: 40px 0;">
-                <a href="index.html" class="back-link">← back to home</a>
-            </div>
-
-            <footer style="border-top: 1px solid #999; padding: 30px; text-align: center; color: #666; margin-top: 60px; font-size: 0.85rem;">
+            <footer class="docs-footer">
                 <p>useless bot © 2024-2026</p>
                 <p>licensed under mit</p>
                 <p>built with ❤️ and existential humor</p>
-                <p><a href="https://github.com/wardenfi/Useless-Bot" style="color: #333; text-decoration: underline;">github</a> | <a href="#feedback" style="color: #333; text-decoration: underline;">feedback</a> | <a href="index.html" style="color: #333; text-decoration: underline;">home</a></p>
+                <p><a href="https://github.com/wardenfi/Useless-Bot">github</a> | <a href="#feedback">feedback</a> | <a href="index.html">home</a></p>
             </footer>
         </main>
     </div>

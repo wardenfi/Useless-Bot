@@ -3,341 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>useless bot</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #c7d5e0;
-            color: #333;
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            margin-bottom: 40px;
-        }
-
-        .ascii-art {
-            font-size: 14px;
-            line-height: 1.2;
-            color: #333;
-            white-space: pre;
-            font-family: monospace;
-            margin-bottom: 30px;
-        }
-
-        .tagline {
-            font-size: 1rem;
-            color: #555;
-            margin: 20px 0;
-            border-left: 3px solid #666;
-            padding-left: 15px;
-        }
-
-        nav {
-            margin: 30px 0;
-            padding: 15px 0;
-            border-bottom: 1px solid #999;
-        }
-
-        nav a {
-            color: #333;
-            text-decoration: underline;
-            margin: 0 15px 0 0;
-        }
-
-        nav a:hover {
-            color: #000;
-        }
-
-        .hero {
-            padding: 30px 0;
-            margin-bottom: 30px;
-        }
-
-        .hero h1 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #222;
-        }
-
-        .hero p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .badges {
-            margin: 20px 0;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #fff;
-            border: 1px solid #999;
-            padding: 5px 12px;
-            margin: 5px 5px 5px 0;
-            font-size: 0.75rem;
-            color: #666;
-        }
-
-        .features {
-            margin-bottom: 40px;
-        }
-
-        .feature {
-            border-left: 2px solid #999;
-            padding: 15px 0 15px 20px;
-            margin: 20px 0;
-        }
-
-        .feature h3 {
-            color: #333;
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-
-        .feature p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .cta {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background: transparent;
-            border: 2px solid #666;
-            color: #333;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin: 10px;
-        }
-
-        .btn:hover {
-            background: #666;
-            color: #fff;
-        }
-
-        .info-box {
-            background: #f5f5f5;
-            border: 1px solid #999;
-            padding: 20px;
-            margin: 30px 0;
-            color: #666;
-        }
-
-        .info-box strong {
-            color: #333;
-        }
-
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-            padding: 30px 0;
-            border-top: 1px solid #999;
-            border-bottom: 1px solid #999;
-        }
-
-        .metric {
-            text-align: center;
-        }
-
-        .metric-value {
-            font-size: 2rem;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .metric-label {
-            color: #666;
-            margin-top: 5px;
-            font-size: 0.8rem;
-        }
-
-        footer {
-            border-top: 1px solid #999;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 50px;
-            color: #666;
-            font-size: 0.85rem;
-        }
-
-        code {
-            background: #f5f5f5;
-            padding: 2px 8px;
-            border: 1px solid #ddd;
-            color: #333;
-        }
-
-        .code-block {
-            background: #f5f5f5;
-            border: 1px solid #999;
-            padding: 20px;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            color: #333;
-            white-space: pre;
-            overflow-x: auto;
-        }
-
-        .section {
-            margin: 50px 0;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            color: #333;
-            margin: 30px 0 20px 0;
-        }
-
-        p {
-            margin: 15px 0;
-            color: #555;
-        }
-
-        .philosophy-box {
-            border: 1px solid #999;
-            padding: 30px;
-            margin: 40px 0;
-            background: #fff;
-        }
-
-        .philosophy-box h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .philosophy-box p {
-            margin-bottom: 15px;
-        }
-    </style>
+    <meta name="description" content="Useless Bot - The world's first AI agent framework for doing absolutely nothing at autonomous scale. Built on cutting-edge LLM technology.">
+    <meta name="keywords" content="useless bot, AI, autonomous agents, LLM, framework, nothing, satire">
+    <meta name="author" content="The useless bot Team">
+    <meta property="og:title" content="useless bot - Autonomous Nothing at Scale">
+    <meta property="og:description" content="The ultimate AI agent framework for achieving absolute zero">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uselessbot.fun">
+    <title>useless bot - Autonomous Nothing at Scale</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <div class="container">
-        <header>
-            <div class="ascii-art">
-                                    
+        <header class="site-header">
+            <div class="ascii-art" role="img" aria-label="Useless Bot ASCII art logo">
+                         __                
    __  __________  / /__  __________
   / / / / ___/ _ \/ / _ \/ ___/ ___/
  / /_/ (__  )  __/ /  __(__  |__  ) 
  \__,_/____/\___/_/\___/____/____/  
                                     
-   / /_  ____  / /
-  / __ \/ __ \/ __/
- / /_/ / /_/ / /_  
-/_.___/\____/\__/  
+        / /_  ____  / /_
+       / __ \/ __ \/ __/
+      / /_/ / /_/ / /_  
+     /_.___/\____/\__/  
             </div>
-            <div class="tagline">the ultimate ai agent framework for achieving absolute zero</div>
+            <p class="tagline">the ultimate ai agent framework for achieving absolute zero</p>
         </header>
 
-        <nav>
-            <a href="index.html">about useless bot</a> / 
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">about useless bot</a> / 
             <a href="docs.html">docs</a> / 
             <a href="https://github.com/wardenfi/Useless-Bot">github</a>
         </nav>
 
-        <div class="hero">
-            <h1>useless bot</h1>
-            <p>The world's first AI agent framework for doing absolutely nothing at autonomous scale.</p>
-            <p>Built on cutting-edge LLM technology, useless bot enables AI agents to accomplish nothing faster than ever before.</p>
-            
-            <div class="badges">
-                <span class="badge">ai powered</span>
-                <span class="badge">autonomous agents</span>
-                <span class="badge">llm integrated</span>
-                <span class="badge">multi-agent orchestration</span>
-                <span class="badge">zero dependencies</span>
-                <span class="badge">infinite scalability</span>
-            </div>
-        </div>
+        <main id="main-content">
+            <section class="hero">
+                <h1>useless bot</h1>
+                <p>The world's first AI agent framework for doing absolutely nothing at autonomous scale.</p>
+                <p>Built on cutting-edge LLM technology, useless bot enables AI agents to accomplish nothing faster than ever before.</p>
+                
+                <div class="badges" role="list">
+                    <span class="badge" role="listitem">ai powered</span>
+                    <span class="badge" role="listitem">autonomous agents</span>
+                    <span class="badge" role="listitem">llm integrated</span>
+                    <span class="badge" role="listitem">multi-agent orchestration</span>
+                    <span class="badge" role="listitem">zero dependencies</span>
+                    <span class="badge" role="listitem">infinite scalability</span>
+                </div>
+            </section>
 
-        <div class="info-box">
-            <strong>[note]</strong> useless bot is currently in the conceptual/philosophical phase. This documentation represents our vision for autonomous nothing. All specifications are subject to remain unchanged because nothing ever changes here.
-        </div>
+            <aside class="info-box" role="note">
+                <strong>[note]</strong> useless bot is currently in the conceptual/philosophical phase. This documentation represents our vision for autonomous nothing. All specifications are subject to remain unchanged because nothing ever changes here.
+            </aside>
 
-        <div class="metrics">
-            <div class="metric">
-                <div class="metric-value">0</div>
-                <div class="metric-label">agents deployed</div>
-            </div>
-            <div class="metric">
-                <div class="metric-value">∞</div>
-                <div class="metric-label">potential value</div>
-            </div>
-            <div class="metric">
-                <div class="metric-value">100%</div>
-                <div class="metric-label">useless output</div>
-            </div>
-            <div class="metric">
-                <div class="metric-value">$0</div>
-                <div class="metric-label">total value locked</div>
-            </div>
-        </div>
+            <section class="metrics" aria-label="Project metrics">
+                <div class="metric">
+                    <div class="metric-value">0</div>
+                    <div class="metric-label">agents deployed</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">∞</div>
+                    <div class="metric-label">potential value</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">100%</div>
+                    <div class="metric-label">useless output</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">$0</div>
+                    <div class="metric-label">total value locked</div>
+                </div>
+            </section>
 
-        <div class="section">
-            <h2>quick start</h2>
+            <section class="section">
+                <h2>quick start</h2>
 
-        <div class="code-block">npm install @useless/core @useless/cli</div>
+                <pre class="code-block"><code>npm install @useless/core @useless/cli</code></pre>
 
-        <div class="code-block">import { createUselessBot } from '@useless/core';
+                <pre class="code-block"><code>import { createUselessBot } from '@useless/core';
 
 const agent = await createUselessBot();
 await agent.run(); // Autonomous nothing
-console.log(agent.getResult()); // undefined</div>
+console.log(agent.getResult()); // undefined</code></pre>
 
-        <div class="cta">
-            <a href="docs.html" class="btn">read full documentation</a>
-            <a href="https://github.com/wardenfi/Useless-Bot" class="btn">view on github</a>
-        </div>
-        </div>
+                <div class="cta">
+                    <a href="docs.html" class="btn">read full documentation</a>
+                    <a href="https://github.com/wardenfi/Useless-Bot" class="btn">view on github</a>
+                </div>
+            </section>
 
-        <div class="philosophy-box" id="philosophy">
-            <h2>the useless philosophy</h2>
-            <p>
-                In a world obsessed with AI agents that do more, build faster, and automate everything, useless bot dares to ask: <em>What if autonomous systems just... didn't?</em>
-            </p>
-            <p>
-                useless bot is a meditation on the modern AI ecosystem. A reflection of an industry that builds elaborate agent frameworks over empty cores. Where documentation promises revolutionary reasoning while the code returns <code>void</code>.
-            </p>
-            <p>
-                We've seen the AI agents with thousands of stars and zero real autonomy. The frameworks that require frameworks. The agents that solve problems nobody has. useless bot is the logical conclusion of this trajectory.
-            </p>
-            <p>
-                <strong>own nothing. do nothing. be nothing.</strong>
-            </p>
-        </div>
+            <section class="philosophy-box" id="philosophy" aria-labelledby="philosophy-heading">
+                <h2 id="philosophy-heading">the useless philosophy</h2>
+                <p>
+                    In a world obsessed with AI agents that do more, build faster, and automate everything, useless bot dares to ask: <em>What if autonomous systems just... didn't?</em>
+                </p>
+                <p>
+                    useless bot is a meditation on the modern AI ecosystem. A reflection of an industry that builds elaborate agent frameworks over empty cores. Where documentation promises revolutionary reasoning while the code returns <code>void</code>.
+                </p>
+                <p>
+                    We've seen the AI agents with thousands of stars and zero real autonomy. The frameworks that require frameworks. The agents that solve problems nobody has. useless bot is the logical conclusion of this trajectory.
+                </p>
+                <p>
+                    <strong>own nothing. do nothing. be nothing.</strong>
+                </p>
+            </section>
 
-        <div style="text-align: center; margin: 40px 0;">
-            <p style="font-size: 1.2rem; margin-bottom: 20px;">join the useless bot revolution</p>
-            <p>Star us on GitHub. Read our docs. Install our packages.</p>
-            <p>Then close your terminal and go outside.</p>
-            <p>Because that's what useless bot is really about.</p>
-        </div>
+            <section class="section" aria-labelledby="revolution-heading">
+                <h2 id="revolution-heading" class="visually-hidden">Join the Revolution</h2>
+                <div class="cta">
+                    <p style="font-size: 1.2rem; margin-bottom: 20px;">join the useless bot revolution</p>
+                    <p>Star us on GitHub. Read our docs. Install our packages.</p>
+                    <p>Then close your terminal and go outside.</p>
+                    <p>Because that's what useless bot is really about.</p>
+                </div>
+            </section>
+        </main>
 
-        <footer>
+        <footer class="site-footer">
             <p>useless bot © 2024-2026</p>
             <p>licensed under mit</p>
-            <p>built with ❤️ and existential dread</p>
+            <p>built ♥ and existential dread</p>
         </footer>
     </div>
 </body>
