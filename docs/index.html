@@ -11,123 +11,279 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://uselessbot.fun">
     <title>useless bot - Autonomous Nothing at Scale</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/win95.css">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <div class="container">
-        <header class="site-header">
-            <div class="ascii-art" role="img" aria-label="Useless Bot ASCII art logo">
-                         __                
-   __  __________  / /__  __________
-  / / / / ___/ _ \/ / _ \/ ___/ ___/
- / /_/ (__  )  __/ /  __(__  |__  ) 
- \__,_/____/\___/_/\___/____/____/  
-                                    
-        / /_  ____  / /_
-       / __ \/ __ \/ __/
-      / /_/ / /_/ / /_  
-     /_.___/\____/\__/  
+    <!-- Desktop -->
+    <div class="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" data-window="welcome-window" tabindex="0">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23008080' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'%3E💻%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">Welcome</span>
             </div>
-            <p class="tagline">the ultimate ai agent framework for achieving absolute zero</p>
-        </header>
+            <div class="desktop-icon" data-window="docs-window" tabindex="0">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23c0c0c0' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23000' text-anchor='middle'%3E📄%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">Documentation</span>
+            </div>
+            <div class="desktop-icon" data-window="about-window" tabindex="0">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23808080' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23fff' text-anchor='middle'%3Eℹ️%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">About</span>
+            </div>
+            <div class="desktop-icon" data-window="github-window" tabindex="0">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23000' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' fill='%23fff' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">GitHub</span>
+            </div>
+        </div>
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <a href="index.html" aria-current="page">about useless bot</a> / 
-            <a href="docs.html">docs</a> / 
-            <a href="https://github.com/wardenfi/Useless-Bot">github</a>
-        </nav>
-
-        <main id="main-content">
-            <section class="hero">
+        <!-- Windows -->
+        
+        <!-- Welcome Window -->
+        <div class="window" id="welcome-window" style="width: 600px; height: 500px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23fff' text-anchor='middle'%3E💻%3C/text%3E%3C/svg%3E" alt="">
+                    useless bot - Welcome
+                </div>
+                <div class="title-bar-controls">
+                    <button class="title-bar-btn minimize-btn" aria-label="Minimize">_</button>
+                    <button class="title-bar-btn maximize-btn" aria-label="Maximize">□</button>
+                    <button class="title-bar-btn close-btn" aria-label="Close">×</button>
+                </div>
+            </div>
+            <div class="window-body">
                 <h1>useless bot</h1>
-                <p>The world's first AI agent framework for doing absolutely nothing at autonomous scale.</p>
-                <p>Built on cutting-edge LLM technology, useless bot enables AI agents to accomplish nothing faster than ever before.</p>
+                <p style="font-size: 13px; margin-bottom: 16px;">The world's first AI agent framework for doing absolutely nothing at autonomous scale.</p>
                 
-                <div class="badges" role="list">
-                    <span class="badge" role="listitem">ai powered</span>
-                    <span class="badge" role="listitem">autonomous agents</span>
-                    <span class="badge" role="listitem">llm integrated</span>
-                    <span class="badge" role="listitem">multi-agent orchestration</span>
-                    <span class="badge" role="listitem">zero dependencies</span>
-                    <span class="badge" role="listitem">infinite scalability</span>
+                <div class="fieldset">
+                    <div class="fieldset-legend">System Features</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <div>✓ AI Powered</div>
+                        <div>✓ Zero Dependencies</div>
+                        <div>✓ Autonomous Agents</div>
+                        <div>✓ Infinite Scalability</div>
+                        <div>✓ LLM Integrated</div>
+                        <div>✓ 100% Useless</div>
+                    </div>
                 </div>
-            </section>
 
-            <aside class="info-box" role="note">
-                <strong>[note]</strong> useless bot is currently in the conceptual/philosophical phase. This documentation represents our vision for autonomous nothing. All specifications are subject to remain unchanged because nothing ever changes here.
-            </aside>
-
-            <section class="metrics" aria-label="Project metrics">
-                <div class="metric">
-                    <div class="metric-value">0</div>
-                    <div class="metric-label">agents deployed</div>
+                <div class="fieldset">
+                    <div class="fieldset-legend">Project Metrics</div>
+                    <table width="100%" cellpadding="4" style="background: white;">
+                        <tr>
+                            <td><strong>Agents Deployed:</strong></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Potential Value:</strong></td>
+                            <td>∞</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Useless Output:</strong></td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Value Locked:</strong></td>
+                            <td>$0</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="metric">
-                    <div class="metric-value">∞</div>
-                    <div class="metric-label">potential value</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">100%</div>
-                    <div class="metric-label">useless output</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">$0</div>
-                    <div class="metric-label">total value locked</div>
-                </div>
-            </section>
 
-            <section class="section">
-                <h2>quick start</h2>
+                <p style="margin-top: 16px; text-align: center;">
+                    <button class="win95-button" onclick="desktop.openWindow('docs-window')">View Documentation</button>
+                    <button class="win95-button" onclick="desktop.openWindow('github-window')">Visit GitHub</button>
+                </p>
+            </div>
+            <div class="status-bar">
+                <div class="status-bar-field">Ready</div>
+            </div>
+        </div>
 
-                <pre class="code-block"><code>npm install @useless/core @useless/cli</code></pre>
+        <!-- Documentation Window -->
+        <div class="window" id="docs-window" style="width: 650px; height: 550px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E📄%3C/text%3E%3C/svg%3E" alt="">
+                    Quick Start Guide
+                </div>
+                <div class="title-bar-controls">
+                    <button class="title-bar-btn minimize-btn" aria-label="Minimize">_</button>
+                    <button class="title-bar-btn maximize-btn" aria-label="Maximize">□</button>
+                    <button class="title-bar-btn close-btn" aria-label="Close">×</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <h2>Quick Start</h2>
+                <p>Get started with useless bot in just a few commands:</p>
 
-                <pre class="code-block"><code>import { createUselessBot } from '@useless/core';
+                <h3>Installation</h3>
+                <pre>npm install @useless/core @useless/cli</pre>
+
+                <h3>Basic Usage</h3>
+                <pre>import { createUselessBot } from '@useless/core';
 
 const agent = await createUselessBot();
 await agent.run(); // Autonomous nothing
-console.log(agent.getResult()); // undefined</code></pre>
+console.log(agent.getResult()); // undefined</pre>
 
-                <div class="cta">
-                    <a href="docs.html" class="btn">read full documentation</a>
-                    <a href="https://github.com/wardenfi/Useless-Bot" class="btn">view on github</a>
+                <div class="fieldset">
+                    <div class="fieldset-legend">Important Note</div>
+                    <p>useless bot is currently in the conceptual/philosophical phase. This documentation represents our vision for autonomous nothing. All specifications are subject to remain unchanged because nothing ever changes here.</p>
                 </div>
-            </section>
 
-            <section class="philosophy-box" id="philosophy" aria-labelledby="philosophy-heading">
-                <h2 id="philosophy-heading">the useless philosophy</h2>
-                <p>
-                    In a world obsessed with AI agents that do more, build faster, and automate everything, useless bot dares to ask: <em>What if autonomous systems just... didn't?</em>
-                </p>
-                <p>
-                    useless bot is a meditation on the modern AI ecosystem. A reflection of an industry that builds elaborate agent frameworks over empty cores. Where documentation promises revolutionary reasoning while the code returns <code>void</code>.
-                </p>
-                <p>
-                    We've seen the AI agents with thousands of stars and zero real autonomy. The frameworks that require frameworks. The agents that solve problems nobody has. useless bot is the logical conclusion of this trajectory.
-                </p>
-                <p>
-                    <strong>own nothing. do nothing. be nothing.</strong>
-                </p>
-            </section>
+                <h3>What You Get</h3>
+                <ul>
+                    <li>Advanced LLM integration that produces nothing</li>
+                    <li>Multi-agent orchestration of zero tasks</li>
+                    <li>Autonomous decision-making to do nothing</li>
+                    <li>Infinite scalability of emptiness</li>
+                    <li>Real-time monitoring of void</li>
+                </ul>
 
-            <section class="section" aria-labelledby="revolution-heading">
-                <h2 id="revolution-heading" class="visually-hidden">Join the Revolution</h2>
-                <div class="cta">
-                    <p style="font-size: 1.2rem; margin-bottom: 20px;">join the useless bot revolution</p>
-                    <p>Star us on GitHub. Read our docs. Install our packages.</p>
-                    <p>Then close your terminal and go outside.</p>
-                    <p>Because that's what useless bot is really about.</p>
+                <p style="margin-top: 16px;">
+                    For complete documentation, visit: 
+                    <a href="docs.html" target="_blank">docs.html</a>
+                </p>
+            </div>
+            <div class="status-bar">
+                <div class="status-bar-field">Page 1 of 1</div>
+            </div>
+        </div>
+
+        <!-- About Window -->
+        <div class="window" id="about-window" style="width: 500px; height: 450px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23fff' text-anchor='middle'%3Eℹ️%3C/text%3E%3C/svg%3E" alt="">
+                    About useless bot
                 </div>
-            </section>
-        </main>
+                <div class="title-bar-controls">
+                    <button class="title-bar-btn minimize-btn" aria-label="Minimize">_</button>
+                    <button class="title-bar-btn maximize-btn" aria-label="Maximize">□</button>
+                    <button class="title-bar-btn close-btn" aria-label="Close">×</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <h2>The Useless Philosophy</h2>
+                
+                <p>In a world obsessed with AI agents that do more, build faster, and automate everything, useless bot dares to ask: <em>What if autonomous systems just... didn't?</em></p>
 
-        <footer class="site-footer">
-            <p>useless bot © 2024-2026</p>
-            <p>licensed under mit</p>
-            <p>built ♥ and existential dread</p>
-        </footer>
+                <p>useless bot is a meditation on the modern AI ecosystem. A reflection of an industry that builds elaborate agent frameworks over empty cores. Where documentation promises revolutionary reasoning while the code returns <code>void</code>.</p>
+
+                <p>We've seen the AI agents with thousands of stars and zero real autonomy. The frameworks that require frameworks. The agents that solve problems nobody has. useless bot is the logical conclusion of this trajectory.</p>
+
+                <div class="fieldset">
+                    <div class="fieldset-legend">Core Principles</div>
+                    <p style="text-align: center; font-size: 14px; font-weight: bold; margin: 12px 0;">
+                        OWN NOTHING<br>
+                        DO NOTHING<br>
+                        BE NOTHING
+                    </p>
+                </div>
+
+                <h3>The Revolution</h3>
+                <p>Join the useless bot revolution:</p>
+                <ul>
+                    <li>Star us on GitHub</li>
+                    <li>Read our docs</li>
+                    <li>Install our packages</li>
+                    <li>Then close your terminal and go outside</li>
+                </ul>
+                
+                <p>Because that's what useless bot is really about.</p>
+            </div>
+            <div class="status-bar">
+                <div class="status-bar-field">© 2024-2026 useless bot</div>
+            </div>
+        </div>
+
+        <!-- GitHub Window -->
+        <div class="window" id="github-window" style="width: 450px; height: 350px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='10' fill='%23fff' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E" alt="">
+                    GitHub Repository
+                </div>
+                <div class="title-bar-controls">
+                    <button class="title-bar-btn minimize-btn" aria-label="Minimize">_</button>
+                    <button class="title-bar-btn maximize-btn" aria-label="Maximize">□</button>
+                    <button class="title-bar-btn close-btn" aria-label="Close">×</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <h2>GitHub Repository</h2>
+                
+                <div class="fieldset">
+                    <div class="fieldset-legend">Repository Info</div>
+                    <p><strong>URL:</strong><br>
+                    <a href="https://github.com/wardenfi/Useless-Bot" target="_blank">github.com/wardenfi/Useless-Bot</a></p>
+                    
+                    <p style="margin-top: 12px;"><strong>Website:</strong><br>
+                    <a href="https://uselessbot.fun" target="_blank">uselessbot.fun</a></p>
+                </div>
+
+                <h3>Get Involved</h3>
+                <ul>
+                    <li>⭐ Star the repository</li>
+                    <li>🍴 Fork the codebase</li>
+                    <li>📖 Read the documentation</li>
+                    <li>🐛 Report non-existent bugs</li>
+                    <li>💡 Suggest features we won't implement</li>
+                </ul>
+
+                <p style="margin-top: 16px; text-align: center;">
+                    <button class="win95-button" onclick="window.open('https://github.com/wardenfi/Useless-Bot', '_blank')">Open GitHub</button>
+                </p>
+            </div>
+            <div class="status-bar">
+                <div class="status-bar-field">MIT License</div>
+            </div>
+        </div>
     </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <button class="start-button">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23f00' width='16' height='16'/%3E%3Ctext x='8' y='12' font-family='Arial' font-size='10' font-weight='bold' fill='%23fff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" alt="">
+            <span>Start</span>
+        </button>
+        
+        <div class="task-list"></div>
+        
+        <div class="system-tray">
+            <span class="clock">12:00 PM</span>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu">
+        <div class="start-menu-banner">useless bot 95</div>
+        <div class="start-menu-items">
+            <div class="start-menu-item" data-window="welcome-window">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E💻%3C/text%3E%3C/svg%3E" alt="">
+                <span>Welcome</span>
+            </div>
+            <div class="start-menu-item" data-window="docs-window">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E📄%3C/text%3E%3C/svg%3E" alt="">
+                <span>Documentation</span>
+            </div>
+            <div class="start-menu-item" data-window="about-window">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3Eℹ️%3C/text%3E%3C/svg%3E" alt="">
+                <span>About</span>
+            </div>
+            <div class="start-menu-separator"></div>
+            <div class="start-menu-item" data-window="github-window">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='10' fill='%23000' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E" alt="">
+                <span>GitHub</span>
+            </div>
+            <div class="start-menu-separator"></div>
+            <div class="start-menu-item" onclick="window.open('docs.html', '_blank')">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E" alt="">
+                <span>Full Docs</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/desktop.js"></script>
 </body>
 </html>
