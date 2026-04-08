@@ -28,7 +28,7 @@ body {
   overflow: hidden;
   background: var(--win95-teal);
   height: 100vh;
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><defs><filter id=\"shadow\"><feDropShadow dx=\"1\" dy=\"1\" stdDeviation=\"0.5\" flood-color=\"black\" flood-opacity=\"0.5\"/></filter></defs><g filter=\"url(%23shadow)\"><path fill=\"white\" stroke=\"black\" stroke-width=\"1.5\" d=\"M 5 5 L 5 28 L 12 21 L 16 33 L 21 31 L 17 19 L 25 19 Z\"/><path fill=\"%234da6ff\" d=\"M 7 7 L 7 24 L 13 18 L 15.5 27 L 18.5 25.5 L 16 17 L 22 17 Z\"/></g></svg>') 5 5, auto;\n  -webkit-user-select: none;\n  user-select: none;\n}
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><defs><filter id="shadow"><feDropShadow dx="1" dy="1" stdDeviation="0.5" flood-color="black" flood-opacity="0.5"/></filter></defs><g filter="url(%23shadow)"><path fill="white" stroke="black" stroke-width="1.5" d="M 5 5 L 5 28 L 12 21 L 16 33 L 21 31 L 17 19 L 25 19 Z"/><path fill="%234da6ff" d="M 7 7 L 7 24 L 13 18 L 15.5 27 L 18.5 25.5 L 16 17 L 22 17 Z"/></g></svg>') 5 5, auto;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -40,17 +40,8 @@ body {
   position: relative;
   width: 100vw;
   height: calc(100vh - 40px);
-  background: var(--win95-teal);
+  background: url('../wallpaper.jpg') center/cover no-repeat;
   overflow: hidden;
-  /* Add subtle pattern like Windows 95 */
-  background-image: 
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.02) 2px,
-      rgba(0, 0, 0, 0.02) 4px
-    );
 }
 
 /* Desktop Icons */
@@ -516,33 +507,6 @@ body {
 /* ===================================
    Windows 95 Specific Details
    =================================== */
-
-/* Add depth to windows */
-.window::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
-  width: 4px;
-  height: 4px;
-  background: var(--win95-button-shadow);
-}
-
-/* Desktop background with classic pattern option */
-.desktop::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.03;
-  background-image: 
-    repeating-linear-gradient(0deg, #000, #000 1px, transparent 1px, transparent 2px),
-    repeating-linear-gradient(90deg, #000, #000 1px, transparent 1px, transparent 2px);
-  background-size: 4px 4px;
-  pointer-events: none;
-}
 
 /* Title bar gradient for active windows */
 .window.active .title-bar {
