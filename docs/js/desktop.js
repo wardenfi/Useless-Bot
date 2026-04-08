@@ -7,6 +7,7 @@ class Desktop95 {
     this.dragState = null;
     this.botAssistantShown = false;
     this.botMessageIndex = 0;
+    this.terminalInitialized = false;
     
     this.init();
   }
@@ -29,9 +30,9 @@ class Desktop95 {
     
     // Auto-open welcome and about windows on page load
     setTimeout(() => {
-      this.openWindow('welcome-window');
+      this.openWindow('welcome-window', { offsetX: -150, offsetY: -50 });
       setTimeout(() => {
-        this.openWindow('about-window');
+        this.openWindow('about-window', { offsetX: 150, offsetY: 50 });
       }, 500);
     }, 4200); // Delay until after boot screen
     
@@ -178,7 +179,7 @@ class Desktop95 {
     windowEl.addEventListener('mousedown', () => this.focusWindow(windowId));
   }
   
-  openWindow(windowId) {
+  openWindow(windowId, options = {}) {
     const win = this.windows.get(windowId);
     if (!win) return;
     
@@ -191,7 +192,7 @@ class Desktop95 {
     
     // Center window if first open
     if (!windowEl.style.left || windowEl.style.left === '0px') {
-      this.centerWindow(windowEl);
+      this.centerWindow(windowEl, options.offsetX || 0, options.offsetY || 0);
     }
     
     // Focus window
@@ -208,6 +209,15 @@ class Desktop95 {
         this.showBotAssistant("Thinking of contributing? We accept pull requests that remove features! 🚀");
       } else if (windowId === 'about-window' && !this.botAssistantShown) {
         this.showBotAssistant("Learning about the philosophy of nothing? You're already a master! 🧘");
+      } else if (windowId === 'cmd-window') {
+        // Initialize terminal if not already done
+        if (!this.terminalInitialized) {
+          this.setupTerminal();
+          this.terminalInitialized = true;
+        }
+        if (!this.botAssistantShown) {
+          this.showBotAssistant("Opening the command prompt? Try 'help' to see what nothing you can do! 💻");
+        }
       }
     }, 1000);
   }
@@ -359,12 +369,12 @@ class Desktop95 {
     document.removeEventListener('mouseup', this.stopDrag);
   }
   
-  centerWindow(windowEl) {
+  centerWindow(windowEl, offsetX = 0, offsetY = 0) {
     const width = windowEl.offsetWidth || 400;
     const height = windowEl.offsetHeight || 300;
     
-    const x = (window.innerWidth - width) / 2;
-    const y = (window.innerHeight - height - 28) / 2; // Account for taskbar
+    const x = (window.innerWidth - width) / 2 + offsetX;
+    const y = (window.innerHeight - height - 28) / 2 + offsetY; // Account for taskbar
     
     windowEl.style.left = Math.max(0, x) + 'px';
     windowEl.style.top = Math.max(0, y) + 'px';
@@ -622,6 +632,496 @@ class Desktop95 {
       botEl.classList.remove('closing');
       this.botAssistantShown = false;
     }, 300); // Match animation duration
+  }
+  
+  // Terminal Command System
+  setupTerminal() {
+    this.terminalHistory = [];
+    this.historyIndex = -1;
+    this.currentPath = 'C:\\USELESS\\SYSTEM';
+    this.terminalState = {
+      secretsFound: [],
+      agentsDeployed: 0,
+      voidLevel: 0,
+      enlightenmentPoints: 0
+    };
+    
+    const terminalOutput = document.getElementById('terminal-output');
+    if (!terminalOutput) return;
+    
+    // Initial boot messages
+    this.terminalPrint('useless bot Command Prompt [Version 0.0.0]', true);
+    this.terminalPrint('(c) 1995 useless bot Corporation. All rights reserved.', true);
+    this.terminalPrint('', true);
+    this.terminalPrint('Type "help" for a list of commands.', true);
+    this.terminalPrint('Type "nothing" to do nothing.', true);
+    this.terminalPrompt();
+  }
+  
+  terminalPrint(text, skipNewLine = false) {
+    const output = document.getElementById('terminal-output');
+    if (!output) return;
+    
+    const line = document.createElement('div');
+    line.textContent = text;
+    line.style.whiteSpace = 'pre-wrap';
+    if (!skipNewLine) line.style.marginBottom = '4px';
+    output.appendChild(line);
+    output.scrollTop = output.scrollHeight;
+  }
+  
+  terminalPrompt() {
+    const output = document.getElementById('terminal-output');
+    if (!output) return;
+    
+    const promptLine = document.createElement('div');
+    promptLine.style.display = 'flex';
+    promptLine.style.marginTop = '8px';
+    
+    const prompt = document.createElement('span');
+    prompt.textContent = this.currentPath + '> ';
+    prompt.style.color = '#00ff00';
+    
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.style.background = 'transparent';
+    input.style.border = 'none';
+    input.style.outline = 'none';
+    input.style.color = '#c0c0c0';
+    input.style.fontFamily = 'Courier New, monospace';
+    input.style.fontSize = '12px';
+    input.style.flex = '1';
+    input.style.caretColor = '#c0c0c0';
+    
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const command = input.value.trim();
+        if (command) {
+          this.terminalHistory.push(command);
+          this.historyIndex = this.terminalHistory.length;
+          this.terminalPrint(this.currentPath + '> ' + command, true);
+          input.disabled = true;
+          this.executeCommand(command);
+        } else {
+          this.terminalPrompt();
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (this.historyIndex > 0) {
+          this.historyIndex--;
+          input.value = this.terminalHistory[this.historyIndex];
+        }
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (this.historyIndex < this.terminalHistory.length - 1) {
+          this.historyIndex++;
+          input.value = this.terminalHistory[this.historyIndex];
+        } else {
+          this.historyIndex = this.terminalHistory.length;
+          input.value = '';
+        }
+      }
+    });
+    
+    promptLine.appendChild(prompt);
+    promptLine.appendChild(input);
+    output.appendChild(promptLine);
+    input.focus();
+    output.scrollTop = output.scrollHeight;
+  }
+  
+  executeCommand(cmd) {
+    const args = cmd.toLowerCase().split(' ');
+    const command = args[0];
+    
+    setTimeout(() => {
+      switch(command) {
+        case 'help':
+          this.cmdHelp();
+          break;
+        case 'nothing':
+          this.cmdNothing();
+          break;
+        case 'dir':
+        case 'ls':
+          this.cmdDir();
+          break;
+        case 'cd':
+          this.cmdCd(args[1]);
+          break;
+        case 'deploy':
+          this.cmdDeploy();
+          break;
+        case 'status':
+          this.cmdStatus();
+          break;
+        case 'void':
+          this.cmdVoid();
+          break;
+        case 'meditate':
+          this.cmdMeditate();
+          break;
+        case 'enlighten':
+          this.cmdEnlighten();
+          break;
+        case 'secrets':
+          this.cmdSecrets();
+          break;
+        case 'hack':
+          this.cmdHack();
+          break;
+        case 'sudo':
+          this.cmdSudo(args.slice(1).join(' '));
+          break;
+        case 'cls':
+        case 'clear':
+          this.cmdClear();
+          break;
+        case 'echo':
+          this.cmdEcho(args.slice(1).join(' '));
+          break;
+        case 'exit':
+          this.cmdExit();
+          break;
+        case 'useless':
+          this.cmdUseless();
+          break;
+        case 'wisdom':
+          this.cmdWisdom();
+          break;
+        case 'cat':
+          this.cmdCat(args[1]);
+          break;
+        case 'rm':
+          this.cmdRm(args[1]);
+          break;
+        case 'format':
+          this.cmdFormat();
+          break;
+        default:
+          this.terminalPrint(`'${command}' is not recognized as an internal or external command,`);
+          this.terminalPrint('operable program or batch file, or useful concept.');
+          this.terminalPrint('');
+          this.terminalPrint('Type "help" for available commands.');
+      }
+      this.terminalPrompt();
+    }, 50);
+  }
+  
+  cmdHelp() {
+    this.terminalPrint('Available commands:');
+    this.terminalPrint('');
+    this.terminalPrint('  help      - Display this help message');
+    this.terminalPrint('  nothing   - Do absolutely nothing (the main feature)');
+    this.terminalPrint('  dir       - List directory contents (spoiler: nothing)');
+    this.terminalPrint('  cd        - Change directory to nowhere');
+    this.terminalPrint('  deploy    - Deploy a useless agent');
+    this.terminalPrint('  status    - Check system status');
+    this.terminalPrint('  void      - Peer into the void');
+    this.terminalPrint('  meditate  - Meditate on nothingness');
+    this.terminalPrint('  enlighten - Seek enlightenment through inaction');
+    this.terminalPrint('  secrets   - Discover hidden truths');
+    this.terminalPrint('  hack      - Attempt to hack the system');
+    this.terminalPrint('  wisdom    - Receive ancient useless wisdom');
+    this.terminalPrint('  useless   - Get useless facts');
+    this.terminalPrint('  sudo      - Try to gain elevated privileges');
+    this.terminalPrint('  cat       - Read a file (that doesn\'t exist)');
+    this.terminalPrint('  rm        - Delete something (unsuccessfully)');
+    this.terminalPrint('  format    - Format the drive (don\'t worry)');
+    this.terminalPrint('  echo      - Echo your existential dread');
+    this.terminalPrint('  clear     - Clear the terminal');
+    this.terminalPrint('  exit      - Close terminal (but why?)');
+    this.terminalPrint('');
+  }
+  
+  cmdNothing() {
+    this.terminalPrint('Doing nothing...');
+    this.terminalPrint('...');
+    this.terminalPrint('...');
+    this.terminalPrint('Nothing done successfully.');
+    this.terminalPrint('');
+    this.terminalState.enlightenmentPoints += 1;
+    if (this.terminalState.enlightenmentPoints === 5) {
+      this.terminalPrint('[Achievement Unlocked: Master of Nothing]');
+      this.terminalState.secretsFound.push('master_of_nothing');
+    }
+  }
+  
+  cmdDir() {
+    this.terminalPrint(' Volume in drive C is VOID');
+    this.terminalPrint(' Volume Serial Number is 0000-0000');
+    this.terminalPrint('');
+    this.terminalPrint(' Directory of ' + this.currentPath);
+    this.terminalPrint('');
+    this.terminalPrint('02/30/1995  00:00    <DIR>          .');
+    this.terminalPrint('02/30/1995  00:00    <DIR>          ..');
+    this.terminalPrint('02/30/1995  00:00                 0 NOTHING.TXT');
+    this.terminalPrint('02/30/1995  00:00                 0 VOID.EXE');
+    this.terminalPrint('02/30/1995  00:00                 0 USELESS.SYS');
+    if (this.terminalState.agentsDeployed > 0) {
+      this.terminalPrint('02/30/1995  00:00                 0 AGENT.NULL');
+    }
+    if (this.terminalState.secretsFound.includes('hidden_file')) {
+      this.terminalPrint('02/30/1995  00:00                 0 SECRET.BAT');
+    }
+    this.terminalPrint('               ' + (3 + (this.terminalState.agentsDeployed > 0 ? 1 : 0)) + ' File(s)              0 bytes');
+    this.terminalPrint('               0 Dir(s)   ∞ bytes free');
+    this.terminalPrint('');
+  }
+  
+  cmdCd(path) {
+    if (!path || path === '.' || path === '') {
+      this.terminalPrint(this.currentPath);
+    } else if (path === '..') {
+      this.terminalPrint('ERROR: Cannot go back. There is nothing behind you.');
+    } else {
+      this.terminalPrint(`The system cannot find the path specified: "${path}"`);
+      this.terminalPrint('Because nothing exists. Welcome to useless bot.');
+    }
+    this.terminalPrint('');
+  }
+  
+  cmdDeploy() {
+    this.terminalState.agentsDeployed++;
+    this.terminalPrint('Initializing agent deployment...');
+    this.terminalPrint('[████████████████████████████████] 100%');
+    this.terminalPrint('');
+    this.terminalPrint(`Agent #${this.terminalState.agentsDeployed} deployed successfully!`);
+    this.terminalPrint(`Status: Idle`);
+    this.terminalPrint(`Task: Nothing`);
+    this.terminalPrint(`Output: void`);
+    this.terminalPrint(`Value Generated: $0.00`);
+    this.terminalPrint('');
+    
+    if (this.terminalState.agentsDeployed === 10) {
+      this.terminalPrint('[Achievement Unlocked: Agent Hoarder]');
+      this.terminalPrint('You deployed 10 agents that do nothing. Impressive dedication!');
+      this.terminalState.secretsFound.push('agent_hoarder');
+      this.terminalPrint('');
+    }
+  }
+  
+  cmdStatus() {
+    this.terminalPrint('=== USELESS BOT SYSTEM STATUS ===');
+    this.terminalPrint('');
+    this.terminalPrint(`Agents Deployed:       ${this.terminalState.agentsDeployed}`);
+    this.terminalPrint(`Void Level:            ${this.terminalState.voidLevel}`);
+    this.terminalPrint(`Enlightenment:         ${this.terminalState.enlightenmentPoints} points`);
+    this.terminalPrint(`Secrets Found:         ${this.terminalState.secretsFound.length}`);
+    this.terminalPrint('');
+    this.terminalPrint(`System Efficiency:     0%`);
+    this.terminalPrint(`Productivity:          null`);
+    this.terminalPrint(`Value:                 undefined`);
+    this.terminalPrint(`Purpose:               404 Not Found`);
+    this.terminalPrint('');
+  }
+  
+  cmdVoid() {
+    this.terminalState.voidLevel++;
+    const voidLevel = this.terminalState.voidLevel;
+    
+    const voidMessages = [
+      'You peer into the void...',
+      'The void peers back.',
+      'You feel... nothing.',
+      'The void whispers: "return null;"',
+      'You see infinite nothingness stretching before you.',
+      'The void says: "I am you. You are me. We are nothing."',
+      'ERROR: Void overflow. Nothing extends beyond capacity.',
+      'The void laughs. It sounds like static.',
+      'You realize the void was inside you all along.',
+      'The void grants you the wisdom of emptiness.',
+      '꙰꙰꙰ V̴̢̛O̷I͜͝D̡͘ ̧C̕͢O҉N͟S̸͘U҉M̢E̸̕S̷ ̷A҉L̛L҉ ꙰꙰꙰'
+    ];
+    
+    this.terminalPrint(voidMessages[Math.min(voidLevel - 1, voidMessages.length - 1)]);
+    this.terminalPrint('');
+    
+    if (voidLevel === 5) {
+      this.terminalPrint('[Achievement Unlocked: Void Gazer]');
+      this.terminalState.secretsFound.push('void_gazer');
+      this.terminalPrint('');
+    }
+  }
+  
+  cmdMeditate() {
+    const wisdoms = [
+      'You meditate on nothingness...\n\n"In doing nothing, you have done everything."\n- Ancient Proverb',
+      'You achieve inner peace...\n\n"The agent that does not run cannot crash."\n- Zen Koan',
+      'Enlightenment washes over you...\n\n"To deploy nothing is to deploy everything."\n- Buddha (probably)',
+      'You feel one with the universe...\n\n"Zero dependencies, zero problems."\n- Modern Wisdom',
+      'Your mind becomes empty...\n\n"return void; is the path to nirvana."\n- JavaScript Sutra'
+    ];
+    
+    this.terminalPrint(wisdoms[Math.floor(Math.random() * wisdoms.length)]);
+    this.terminalPrint('');
+    this.terminalState.enlightenmentPoints += 2;
+  }
+  
+  cmdEnlighten() {
+    if (this.terminalState.enlightenmentPoints >= 10) {
+      this.terminalPrint('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+      this.terminalPrint('  🌟 ENLIGHTENMENT ACHIEVED 🌟');
+      this.terminalPrint('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+      this.terminalPrint('');
+      this.terminalPrint('You have transcended the need for functionality.');
+      this.terminalPrint('You understand that the true value is valuelessness.');
+      this.terminalPrint('You are now one with the void.');
+      this.terminalPrint('');
+      this.terminalPrint('OWN NOTHING. DO NOTHING. BE NOTHING.');
+      this.terminalPrint('');
+      this.terminalState.secretsFound.push('enlightened');
+    } else {
+      this.terminalPrint(`You are not ready for enlightenment.`);
+      this.terminalPrint(`Current enlightenment: ${this.terminalState.enlightenmentPoints}/10 points`);
+      this.terminalPrint('');
+      this.terminalPrint('Try: nothing, meditate, void');
+    }
+    this.terminalPrint('');
+  }
+  
+  cmdSecrets() {
+    if (this.terminalState.secretsFound.length === 0) {
+      this.terminalPrint('No secrets discovered yet.');
+      this.terminalPrint('');
+      this.terminalPrint('Hint: Try exploring different commands...');
+    } else {
+      this.terminalPrint('=== SECRETS DISCOVERED ===');
+      this.terminalPrint('');
+      this.terminalState.secretsFound.forEach(secret => {
+        this.terminalPrint(`✓ ${secret.replace(/_/g, ' ').toUpperCase()}`);
+      });
+    }
+    this.terminalPrint('');
+  }
+  
+  cmdHack() {
+    const hackSteps = [
+      'Initializing hack sequence...',
+      'Bypassing firewall...',
+      'Accessing mainframe...',
+      'Decrypting void.dll...',
+      'Downloading nothing.exe...',
+      'Installing backdoor...',
+      'ERROR: Nothing to hack.',
+      '',
+      'You cannot hack what does not exist.',
+      'The system is perfectly secure because it does nothing.'
+    ];
+    
+    hackSteps.forEach(step => this.terminalPrint(step));
+    this.terminalPrint('');
+    this.terminalState.secretsFound.push('hidden_file');
+  }
+  
+  cmdSudo(command) {
+    if (!command) {
+      this.terminalPrint('sudo: no command specified');
+    } else {
+      this.terminalPrint('Permission granted.');
+      this.terminalPrint('You now have administrator privileges over nothing.');
+      this.terminalPrint('');
+      this.terminalPrint(`Executing with elevated privileges: ${command}`);
+      this.terminalPrint('ERROR: Still useless with admin rights.');
+    }
+    this.terminalPrint('');
+  }
+  
+  cmdClear() {
+    const output = document.getElementById('terminal-output');
+    if (output) {
+      output.innerHTML = '';
+    }
+    this.terminalPrint('', true);
+  }
+  
+  cmdEcho(text) {
+    if (!text) {
+      this.terminalPrint('ECHO is on.');
+    } else {
+      this.terminalPrint(text);
+    }
+    this.terminalPrint('');
+  }
+  
+  cmdExit() {
+    this.terminalPrint('Closing terminal...');
+    this.terminalPrint('Just kidding. There is no escape from the void.');
+    this.terminalPrint('');
+    this.terminalPrint('Try "cls" to clear the screen instead.');
+    this.terminalPrint('');
+  }
+  
+  cmdUseless() {
+    const facts = [
+      'Did you know? This framework has negative lines of useful code.',
+      'Fun fact: Every agent deployed increases entropy in the universe.',
+      'Useless fact: You are currently reading useless facts.',
+      'Did you know? The void stares back when you deploy agents.',
+      'Fun fact: This command serves no purpose. Perfect!',
+      'Useless fact: Nothing matters, and that\'s okay.',
+      'Did you know? You could be doing anything else right now.',
+      'Fun fact: This terminal costs 0 compute and provides 0 value.',
+      'Useless fact: The cake is a lie, but the void is real.'
+    ];
+    
+    this.terminalPrint(facts[Math.floor(Math.random() * facts.length)]);
+    this.terminalPrint('');
+  }
+  
+  cmdWisdom() {
+    const wisdoms = [
+      '"The best code is no code at all." - Jeff Atwood (vindicated)',
+      '"Move fast and break nothing." - useless bot philosophy',
+      '"With great power comes great responsibility to do nothing." - Uncle Ben (revised)',
+      '"I think therefore I am... useless." - Descartes (updated)',
+      '"To be or not to be... both are equally pointless." - Shakespeare (reinterpreted)',
+      '"Give me nothing, or give me death. Actually, just nothing." - Patrick Henry (corrected)',
+      '"Ask not what your agent can do for you, for it can do nothing." - JFK (edited)',
+      '"One small step for man, one giant leap for... void." - Neil Armstrong (alternate)',
+      '"The only thing we have to fear is... actually nothing to fear." - FDR (optimized)'
+    ];
+    
+    this.terminalPrint(wisdoms[Math.floor(Math.random() * wisdoms.length)]);
+    this.terminalPrint('');
+  }
+  
+  cmdCat(filename) {
+    if (!filename) {
+      this.terminalPrint('cat: missing operand');
+      this.terminalPrint('Try "cat NOTHING.TXT"');
+    } else {
+      this.terminalPrint(`cat: ${filename}: No such file or directory`);
+      this.terminalPrint('(Because nothing exists)');
+    }
+    this.terminalPrint('');
+  }
+  
+  cmdRm(filename) {
+    if (!filename) {
+      this.terminalPrint('rm: missing operand');
+    } else if (filename === '*' || filename === '*.*') {
+      this.terminalPrint('Deleting everything...');
+      this.terminalPrint('...');
+      this.terminalPrint('Everything deleted successfully!');
+      this.terminalPrint('(There was nothing to delete anyway)');
+    } else {
+      this.terminalPrint(`rm: cannot remove '${filename}': No such file or directory`);
+      this.terminalPrint('You cannot delete what does not exist.');
+    }
+    this.terminalPrint('');
+  }
+  
+  cmdFormat() {
+    this.terminalPrint('WARNING: ALL DATA ON DRIVE C: WILL BE LOST!');
+    this.terminalPrint('Just kidding. There is no data.');
+    this.terminalPrint('');
+    this.terminalPrint('Formatting C:\\ ...');
+    this.terminalPrint('[████████████████████████████████] 100%');
+    this.terminalPrint('');
+    this.terminalPrint('Format complete.');
+    this.terminalPrint('Status: Still nothing.');
+    this.terminalPrint('');
   }
 }
 

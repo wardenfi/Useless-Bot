@@ -109,10 +109,11 @@
 / /_/ /___/ / /___ / /__/ /___  ___/ /___/ / 
 \____//____/_____//_____/_____//____//____/  
                                              
-         / /_  ____  / /_
-        / __ \/ __ \/ __/
-       / /_/ / /_/ / /_  
-      /_.___/\____/\__/  
+    ____  ____  ______
+   / __ )/ __ \/_  __/
+  / __  / / / / / /   
+ / /_/ / /_/ / / /    
+/_____/\____/ /_/  
             </pre>
         </div>
         
@@ -154,7 +155,11 @@
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23FFD700' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23000' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E" alt="">
                 <span class="icon-label">Help</span>
             </div>
-            <div class="desktop-icon" tabindex="0" style="cursor: help;" onclick="alert('Recycle Bin is empty.\\n\\nJust like everything else here.')">
+            <div class="desktop-icon" data-window="cmd-window" tabindex="0">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23000' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Courier New' font-size='18' fill='%23c0c0c0' text-anchor='middle'%3E$_%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">Command Prompt</span>
+            </div>
+            <div class="desktop-icon" tabindex="0" style="cursor: help;" onclick="alert('Recycle Bin is empty.\\n\\nJust like everything else here.')">>
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23c0c0c0' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23000' text-anchor='middle'%3E🗑️%3C/text%3E%3C/svg%3E" alt="">
                 <span class="icon-label">Recycle Bin</span>
             </div>
@@ -370,6 +375,24 @@ console.log(agent.getResult()); // undefined</pre>
             </div>
             <div class="status-bar">
                 <div class="status-bar-field">MIT License</div>
+            </div>
+        </div>
+
+        <!-- Command Prompt Window -->
+        <div class="window" id="cmd-window" style="width: 650px; height: 450px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23fff' text-anchor='middle'%3E⌘%3C/text%3E%3C/svg%3E" alt="">
+                    C:\USELESS\SYSTEM
+                </div>
+                <div class="title-bar-controls">
+                    <button class="title-bar-btn minimize-btn" aria-label="Minimize">_</button>
+                    <button class="title-bar-btn maximize-btn" aria-label="Maximize">□</button>
+                    <button class="title-bar-btn close-btn" aria-label="Close">×</button>
+                </div>
+            </div>
+            <div class="window-body" style="padding: 0; background: #000; color: #c0c0c0; font-family: 'Courier New', monospace; font-size: 12px; height: calc(100% - 40px); overflow-y: auto;">
+                <div id="terminal-output" style="padding: 8px; min-height: 100%;"></div>
             </div>
         </div>
 
@@ -616,6 +639,11 @@ console.log(agent.getResult()); // undefined</pre>
             <div class="start-menu-item" data-window="about-window">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3Eℹ️%3C/text%3E%3C/svg%3E" alt="">
                 <span>About</span>
+            </div>
+            <div class="start-menu-separator"></div>
+            <div class="start-menu-item" data-window="cmd-window">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Courier New' font-size='10' fill='%23000' text-anchor='middle'%3E$_%3C/text%3E%3C/svg%3E" alt="">
+                <span>Command Prompt</span>
             </div>
             <div class="start-menu-separator"></div>
             <div class="start-menu-item" data-window="github-window">
