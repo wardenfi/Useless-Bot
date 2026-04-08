@@ -240,44 +240,24 @@ body {
 
 /* Start Button */
 .start-button {
-  height: 32px;
-  padding: 0 8px;
-  background: var(--win95-gray);
-  border-left: 2px solid var(--win95-button-highlight);
-  border-top: 2px solid var(--win95-button-highlight);
-  border-right: 2px solid var(--win95-button-shadow);
-  border-bottom: 2px solid var(--win95-button-shadow);
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: block;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 13px;
-  font-family: 'MS Sans Serif', Arial, sans-serif;
+  line-height: 0;
+}
+
+.start-button img {
+  display: block;
+  height: 32px;
+  width: auto;
 }
 
 .start-button:active,
 .start-button.active {
-  border-left: 2px solid var(--win95-button-shadow);
-  border-top: 2px solid var(--win95-button-shadow);
-  border-right: 2px solid var(--win95-button-highlight);
-  border-bottom: 2px solid var(--win95-button-highlight);
-  padding-left: 9px;
-  padding-top: 1px;
-  padding-right: 7px;
-}
-
-.start-button img {
-  width: 20px;
-  height: 20px;
-}
-
-.start-button-logo {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform: translateY(1px);
 }
 
 /* Task Buttons */
