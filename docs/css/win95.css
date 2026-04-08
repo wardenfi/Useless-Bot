@@ -316,7 +316,7 @@ body {
   position: fixed;
   bottom: 43px;
   left: 3px;
-  width: 220px;
+  width: 250px;
   background: var(--win95-gray);
   border-left: 2px solid var(--win95-button-highlight);
   border-top: 2px solid var(--win95-button-highlight);
@@ -338,15 +338,22 @@ body {
   padding: 8px 4px;
   font-weight: bold;
   font-size: 20px;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
   float: left;
-  width: 28px;
+  width: 60px;
   letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-menu-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .start-menu-items {
-  margin-left: 28px;
+  margin-left: 60px;
   padding: 4px 2px;
   min-height: fit-content;
 }

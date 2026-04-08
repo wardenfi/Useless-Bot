@@ -44,7 +44,7 @@ class Desktop95 {
     // Show bot assistant after boot screen
     setTimeout(() => {
       this.showBotAssistant();
-    }, 8000); // Show bot 4 seconds after boot completes
+    }, 6000); // Show bot 2 seconds after boot completes
     
     // Setup bot assistant cycling through messages
     this.setupBotAssistant();
@@ -570,10 +570,10 @@ class Desktop95 {
     
     // Show bot with random messages periodically
     setInterval(() => {
-      if (!this.botAssistantShown && Math.random() > 0.6) {
+      if (!this.botAssistantShown && Math.random() > 0.25) {
         this.showBotAssistant();
       }
-    }, 45000); // Check every 45 seconds
+    }, 20000); // Check every 20 seconds
   }
   
   showBotAssistant(message = null) {
@@ -600,7 +600,19 @@ class Desktop95 {
       "I'm trained on billions of parameters to produce exactly zero output!",
       "Fun fact: Every agent deployed produces exactly void. Amazing!",
       "The revolution will not be automated... because we didn't automate anything.",
-      "I see you're still here. That's dedication to the void!"
+      "I see you're still here. That's dedication to the void!",
+      "Hey! Want to hear about our premium plan? It's the same as free: nothing! 💰",
+      "Just checking in! Are you doing nothing productively? Great!",
+      "I'm back! Miss me? Of course you did. Everyone misses nothing.",
+      "Psst... want to see something cool? *shows you nothing*",
+      "Breaking news: You're currently achieving maximum uselessness!",
+      "Did someone order a side of void with their nothing? That was me!",
+      "I'm not annoying, I'm persistently useless. There's a difference!",
+      "Fun fact: I appear more than your actual productivity today! 🎉",
+      "Still trying to understand what this does? Spoiler: Nothing!",
+      "I'm here to remind you that you're doing great at doing nothing!",
+      "Some assistants help. I just... exist. Vibing with the void. ✌️",
+      "Click that X all you want, I'll be back before you know it! 😊"
     ];
     
     // Use provided message or get next from rotation
@@ -615,12 +627,12 @@ class Desktop95 {
     botEl.classList.remove('closing');
     this.botAssistantShown = true;
     
-    // Auto-hide after 15 seconds
+    // Auto-hide after 25 seconds (was 15)
     setTimeout(() => {
       if (this.botAssistantShown) {
         this.hideBotAssistant();
       }
-    }, 15000);
+    }, 25000);
   }
   
   hideBotAssistant() {
@@ -631,6 +643,15 @@ class Desktop95 {
       botEl.style.display = 'none';
       botEl.classList.remove('closing');
       this.botAssistantShown = false;
+      
+      // Chance to reappear soon after being closed
+      if (Math.random() > 0.5) {
+        setTimeout(() => {
+          if (!this.botAssistantShown) {
+            this.showBotAssistant("Did you miss me? I missed me too! 🤖");
+          }
+        }, 15000); // Reappear 15 seconds after closing
+      }
     }, 300); // Match animation duration
   }
   
