@@ -40,8 +40,12 @@ body {
   position: relative;
   width: 100vw;
   height: calc(100vh - 40px);
-  background: url('../wallpaper.jpg') center/cover no-repeat;
+  background: var(--win95-teal);
   overflow: hidden;
+  background-image: url('assets/uselesstext.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 /* Desktop Icons */

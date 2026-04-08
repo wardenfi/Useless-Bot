@@ -26,7 +26,7 @@ class Desktop95 {
       if (bootScreen) {
         bootScreen.style.display = 'none';
       }
-    }, 4000);
+    }, 2000);
     
     // Auto-open welcome and about windows on page load
     setTimeout(() => {
@@ -34,7 +34,7 @@ class Desktop95 {
       setTimeout(() => {
         this.openWindow('about-window', { offsetX: 150, offsetY: 50 });
       }, 500);
-    }, 4200); // Delay until after boot screen
+    }, 2200); // Delay until after boot screen
     
     // Start annoying virus popups after a delay
     setTimeout(() => {
